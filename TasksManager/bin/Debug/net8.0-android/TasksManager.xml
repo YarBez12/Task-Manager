@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TasksManager</name>
+    </assembly>
+    <members>
+        <member name="T:TasksManager.ViewModels.TaskListViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.SelectedTask">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskListViewModel.selectedTask"/>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskListViewModel.deleteTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.DeleteTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.DeleteTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.DeleteTask(TasksManager.ViewModels.TaskViewModel)"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskListViewModel.completeTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.CompleteTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.CompleteTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.CompleteTask(TasksManager.ViewModels.TaskViewModel)"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskListViewModel.deleteCompletedTasksCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.DeleteCompletedTasksCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.DeleteCompletedTasksCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.DeleteCompletedTasks"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskListViewModel.addTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.AddTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.AddTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.AddTask(TasksManager.ViewModels.TaskViewModel)"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskListViewModel.navigateToAddTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.NavigateToAddTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.NavigateToAddTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.NavigateToAddTask"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskListViewModel.navigateToEditTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.NavigateToEditTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.NavigateToEditTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.NavigateToEditTask(TasksManager.ViewModels.TaskViewModel)"/>.</summary>
+        </member>
+        <member name="T:TasksManager.ViewModels.TaskViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.Title">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.title"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.Description">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.description"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.DueDate">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.dueDate"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.Priority">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.priority"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.IsCompleted">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.isCompleted"/>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskViewModel.saveTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskViewModel.SaveTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.SaveTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskViewModel.SaveTask"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedTask">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedTask" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DueDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DueDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Priority">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Priority" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedTask">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedTask" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DueDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DueDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Priority">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Priority" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TasksManager.Views.MainPage"
+             xmlns:vm = "clr-namespace:TasksManager.ViewModels"
+             Title="Task Manager">
+    <ContentPage.BindingContext>
+        <vm:TaskListViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <ListView ItemsSource="{Binding Tasks}" SelectionMode="Single"
+                        SelectedItem="{Binding SelectedTask, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text = "{Binding Title}" Detail="{Binding DueDate, StringFormat='Due: {0:MM/dd/yyyy'}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text = "Edit"
+                                      Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=NavigateToEditTaskCommand}"
+                                      CommandParameter="{Binding .}"/>
+                            <MenuItem Text = "Complete"
+                                      Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=CompleteTaskCommand}"
+                                      CommandParameter="{Binding .}"/>
+                            <MenuItem Text = "Delete"
+                                      Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=DeleteTaskCommand}"
+                                      CommandParameter="{Binding .}"/>
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="+" 
+                Command="{Binding NavigateToAddTaskCommand}"
+                BackgroundColor="Blue"
+                TextColor="White"
+                CornerRadius="30"
+                WidthRequest="60"
+                HeightRequest="60"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Margin="20"/>
+    </VerticalStackLayout>
+</ContentPage>

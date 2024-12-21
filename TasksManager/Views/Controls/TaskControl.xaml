@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TasksManager.Views.Controls.TaskControl">
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+          ColumnDefinitions="Auto, *"
+          ColumnSpacing="20">
+        <Label Text = "Title"
+               Grid.Row="0"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="End"/>
+        <Entry Placeholder="Task Title"
+               Text = "{Binding Title}"
+               Grid.Row="0"
+               Grid.Column="1"
+               VerticalOptions="Center"/>
+        <Label Text = "Description"
+               Grid.Row="1"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="End"/>
+        <Editor Placeholder="Task Title"
+                Text = "{Binding Description}"
+                AutoSize="TextChanges"
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalOptions="Center"/>
+        <Label Text = "Due date"
+               Grid.Row="2"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="End"/>
+        <DatePicker Date = "{Binding DueDate}"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    VerticalOptions="Center"/>
+        <Label Text = "Priority"
+               Grid.Row="3"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="End"/>
+        <Picker Title="Select Priority"
+                SelectedItem="{Binding Priority}"
+                ItemsSource = "{Binding Priorities}"
+                Grid.Row="3"
+                Grid.Column="1"
+                VerticalOptions="Center">
+        </Picker>
+        <HorizontalStackLayout Grid.Row="4" Grid.ColumnSpan="2" Spacing="30" HorizontalOptions="Center">
+               <Button Text="Save"
+                       Command="{Binding SaveTaskCommand}"
+                       BackgroundColor="Green"
+                       TextColor="White" />
+               <Button Text="Cancel"
+                       Command="{Binding CancelCommand}"
+                       BackgroundColor="Red"
+                       TextColor="White" />
+        </HorizontalStackLayout>
+        
+    </Grid>
+    
+</ContentView>
