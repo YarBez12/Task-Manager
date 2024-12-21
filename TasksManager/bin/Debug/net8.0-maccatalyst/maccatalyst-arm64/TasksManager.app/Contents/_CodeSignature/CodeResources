@@ -215,6 +215,34 @@
 			6KpadPWMTZH5AqRA0tgITxoOWIw+SO4BVLjsiQ/n5zA=
 			</data>
 		</dict>
+		<key>MonoBundle/SQLite-net.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/0h0FMSssyqe6OCqk97walP3tX35PS56JgVOGN+Fcj4=
+			</data>
+		</dict>
+		<key>MonoBundle/SQLitePCLRaw.batteries_v2.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kylPuIiR6IKN27UfH1K8VCl9n9pSQbikaTX+p10gtqM=
+			</data>
+		</dict>
+		<key>MonoBundle/SQLitePCLRaw.core.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l57cyQVqwG1fUrEtm3czsSF5FKtQvxI6sxLgJ+esV6U=
+			</data>
+		</dict>
+		<key>MonoBundle/SQLitePCLRaw.provider.e_sqlite3.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RwA/P9Qppbadb8bP0Wv82XkQMhcB5eeoiQYWQ8gdCGU=
+			</data>
+		</dict>
 		<key>MonoBundle/System.AppContext.dll</key>
 		<dict>
 			<key>hash2</key>
@@ -1346,14 +1374,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O/a6rsNhCQ5uKo68sKNmoCJ959CUUGO5v8kacyfrAMk=
+			+VvRdVpxGTNMxn/5W5JZ/eFlVhxPqZ3jHcIbxSUV/aA=
 			</data>
 		</dict>
 		<key>MonoBundle/TasksManager.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XBF174MMFHrI1LqggVcD2jZ9lgkzng8wq5xJadshIHI=
+			iNMRu76aaeBbpJn443tUZ1uLr1wayeZExxx6XD65UuY=
 			</data>
 		</dict>
 		<key>MonoBundle/WindowsBase.dll</key>
@@ -1367,7 +1395,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LuVx5pZW3GJVZ0bR0uQd4czadvkhl/ze2dCCzyoLEgs=
+			piEU6smIAzyCiKrGaqk4A9pA7sS9x2XtMkVwnoeqttU=
 			</data>
 		</dict>
 		<key>MonoBundle/ar/Microsoft.Maui.Controls.resources.dll</key>
@@ -1494,6 +1522,13 @@
 			<key>hash2</key>
 			<data>
 			c2GkylgM6Eqa5LlI3UUdSUpo6MQYpmldGxz4RzKknDs=
+			</data>
+		</dict>
+		<key>MonoBundle/libe_sqlite3.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7GQGChwosN+onzu5oGGCfWSy3x1WdZdMrAyaaafyvnI=
 			</data>
 		</dict>
 		<key>MonoBundle/ms/Microsoft.Maui.Controls.resources.dll</key>

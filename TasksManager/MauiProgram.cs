@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using TasksManager.Models;
 using TasksManager.Services;
 using TasksManager.ViewModels;
 using TasksManager.Views;
@@ -17,6 +18,10 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
+        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "TasksManager.db3");
+        // builder.Services.AddSingleton(new TaskRepository(dbPath));
+        builder.Services.AddSingleton<TaskRepository>(s => ActivatorUtilities.CreateInstance<TaskRepository>(s,dbPath));
+
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

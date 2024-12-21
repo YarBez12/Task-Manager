@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using TasksManager.Models;
 using TasksManager.Services;
-using Task = TasksManager.Models.Task;
+// using Task = TasksManager.Models.Task;
 
 namespace TasksManager.ViewModels;
 
@@ -40,7 +40,7 @@ public partial class TaskViewModel : ObservableObject
         IsCompleted = false;
     }
 
-    public TaskViewModel(Task task, TaskService taskService = null)
+    public TaskViewModel(TasksManager.Models.Task task, TaskService taskService = null)
     {
         _taskService = taskService ?? new TaskService();
         Id = task.Id;
@@ -78,13 +78,13 @@ public partial class TaskViewModel : ObservableObject
     // }
     
     [RelayCommand]
-    public void SaveTask()
+    public async System.Threading.Tasks.Task SaveTask()
     {
         if (Id <= 0)
         {
-            var newTask = new Models.Task
+            var newTask = new TasksManager.Models.Task
             {
-                Id = Id,
+                // Id = Id,
                 Title = Title,
                 Description = Description,
                 DueDate = DueDate,
@@ -92,25 +92,31 @@ public partial class TaskViewModel : ObservableObject
                 IsCompleted = IsCompleted
             };
 
-            _taskService.AddTask(newTask); 
-            Id = newTask.Id;
+            Id = await _taskService.AddTaskAsync(newTask);
+            // var tt = await App.TaskRepository.GetTasksAsync();
+            // foreach (var t in tt)
+            // {
+            //     Console.WriteLine(t.Title + " - " + t.Id);
+            // }
+            // Console.WriteLine($"Added new task: {Id}");
+            // Id = newTask.Id;
         }
         else 
         {
-            var existingTask = _taskService.GetTaskById(Id);
+            var existingTask = await _taskService.GetTaskByIdAsync(Id);
             if (existingTask != null)
             {
-                existingTask.Id = Id;
+                // existingTask.Id = Id;
                 existingTask.Title = Title;
                 existingTask.Description = Description;
                 existingTask.DueDate = DueDate;
                 existingTask.Priority = Priority;
                 existingTask.IsCompleted = IsCompleted;
 
-                _taskService.UpdateTask(existingTask); 
+                await _taskService.UpdateTaskAsync(existingTask); 
             }
         }
-        Shell.Current.GoToAsync("..");
+        await Shell.Current.GoToAsync("..");
     }
 
     [RelayCommand]

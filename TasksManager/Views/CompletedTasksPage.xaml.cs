@@ -14,9 +14,9 @@ public partial class CompletedTasksPage : ContentPage
         InitializeComponent();
         
     }
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
-        ((TaskListViewModel)BindingContext).RefreshTasks();
+        await ((TaskListViewModel)BindingContext).RefreshTasksAsync();
     }
 }

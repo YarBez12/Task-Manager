@@ -13,10 +13,10 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-        ((TaskListViewModel)BindingContext).RefreshTasks();
-    }
+    // protected override void OnAppearing()
+    // {
+    //     base.OnAppearing();
+    //     ((TaskListViewModel)BindingContext).RefreshTasks();
+    // }
 
 }

@@ -51,6 +51,10 @@
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/Microsoft.Maui.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/Microsoft.Maui.Essentials.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/Microsoft.Maui.Graphics.dll
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/SQLite-net.dll
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/SQLitePCLRaw.batteries_v2.dll
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/SQLitePCLRaw.core.dll
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/SQLitePCLRaw.provider.sqlite3.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/TasksManager.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/Microsoft.CSharp.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/Microsoft.VisualBasic.Core.dll

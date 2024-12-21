@@ -1,8 +1,11 @@
+using SQLite;
+
 namespace TasksManager.Models;
 
+[Table("Tasks")]
 public class Task
 {
-    public int Id { get; internal set; }
+    [PrimaryKey, AutoIncrement] public int Id { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     protected DateTime StartDate { get; set; } = DateTime.Now;

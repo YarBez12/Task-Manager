@@ -1,36 +1,46 @@
-using TasksManager.Models;
-using Task = TasksManager.Models.Task;
+
 namespace TasksManager.Services;
 
 public class TaskService
 {
-    public List<Task> GetTasks()
+    public async System.Threading.Tasks.Task<List<TasksManager.Models.Task>> GetTasksAsync()
     {
-        return TaskRepository.GetTasks();
+        return await App.TaskRepository.GetTasksAsync();
     }
 
-    public Task GetTaskById(int id)
+    public async System.Threading.Tasks.Task<TasksManager.Models.Task> GetTaskByIdAsync(int id)
     {
-        return TaskRepository.GetTaskById(id);
+        return await App.TaskRepository.GetTaskByIdAsync(id);
     }
     
-    public void AddTask(Task task)
+    public async System.Threading.Tasks.Task<int> AddTaskAsync(TasksManager.Models.Task task)
     {
-        TaskRepository.AddTask(task);
+        return await App.TaskRepository.AddTaskAsync(task);
     }
 
-    public void UpdateTask(Task task)
+    public async System.Threading.Tasks.Task<int> UpdateTaskAsync(TasksManager.Models.Task task)
     {
-        TaskRepository.UpdateTask(task);
+        return await App.TaskRepository.UpdateTaskAsync(task);
     }
 
-    public void DeleteTask(Task task)
+    public async System.Threading.Tasks.Task<int> DeleteTaskAsync(TasksManager.Models.Task task)
     {
-        var tasks = TaskRepository.GetTasks();
-        tasks.Remove(task);
+        return await App.TaskRepository.DeleteTaskAsync(task);
     }
-    public void DeleteTask(int id)
+    public async System.Threading.Tasks.Task<int> DeleteTaskAsync(int id)
     {
-        TaskRepository.DeleteTask(id);
+        var task = await App.TaskRepository.GetTaskByIdAsync(id);
+        if (task != null)
+        {
+            return await App.TaskRepository.DeleteTaskAsync(task);
+        }
+
+        return -1;
+    }
+    
+    //new
+    public async System.Threading.Tasks.Task<int> DeleteCompletedTasksAsync()
+    {
+        return await App.TaskRepository.DeleteCompletedTasksAsync();
     }
 }
