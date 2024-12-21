@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using TasksManager.Services;
+using TasksManager.ViewModels;
+using TasksManager.Views;
 
 namespace TasksManager;
 
@@ -14,7 +17,6 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
-
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

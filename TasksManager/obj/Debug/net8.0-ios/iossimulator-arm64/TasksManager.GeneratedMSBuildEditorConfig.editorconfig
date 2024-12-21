@@ -51,11 +51,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = TasksManager.Views.AddTask
 build_metadata.AdditionalFiles.TargetPath = Views/AddTaskPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/AddTaskPage.xaml
 
+[/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/Views/CompletedTasksPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TasksManager.Views.CompletedTasksPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CompletedTasksPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CompletedTasksPage.xaml
+
 [/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/Views/Controls/TaskControl.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TasksManager.Views.Controls.TaskControl.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/Controls/TaskControl.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/Controls/TaskControl.xaml
+
+[/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/Views/CurrentTasksPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TasksManager.Views.CurrentTasksPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CurrentTasksPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CurrentTasksPage.xaml
 
 [/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/Views/EditTaskPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

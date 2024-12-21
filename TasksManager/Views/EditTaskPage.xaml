@@ -6,7 +6,7 @@
              xmlns:vm = "clr-namespace:TasksManager.ViewModels"
              x:Class="TasksManager.Views.EditTaskPage">
     <ContentPage.BindingContext>
-        <vm:TaskViewModel></vm:TaskViewModel>
+        <vm:TaskViewModel/>
     </ContentPage.BindingContext>
     <VerticalStackLayout>
         <Label Text="Edit Task" FontSize="24" HorizontalOptions="Center" />

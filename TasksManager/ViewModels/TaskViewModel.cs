@@ -2,12 +2,14 @@ using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using TasksManager.Models;
+using TasksManager.Services;
 using Task = TasksManager.Models.Task;
 
 namespace TasksManager.ViewModels;
 
 public partial class TaskViewModel : ObservableObject
 {
+    private readonly TaskService _taskService;
     public int Id { get; internal set; }
 
     [ObservableProperty]
@@ -27,8 +29,9 @@ public partial class TaskViewModel : ObservableObject
 
     public bool IsOverdue => !IsCompleted && DateTime.Now > DueDate;
 
-    public TaskViewModel(int id, string title, string description, DateTime dueDate, TaskPriority priority)
+    public TaskViewModel(int id, string title, string description, DateTime dueDate, TaskPriority priority, TaskService taskService = null)
     {
+        _taskService = taskService ?? new TaskService();
         Id = id;
         Title = title;
         Description = description;
@@ -37,8 +40,9 @@ public partial class TaskViewModel : ObservableObject
         IsCompleted = false;
     }
 
-    public TaskViewModel(Task task)
+    public TaskViewModel(Task task, TaskService taskService = null)
     {
+        _taskService = taskService ?? new TaskService();
         Id = task.Id;
         title = task.Title;
         description = task.Description;
@@ -46,8 +50,15 @@ public partial class TaskViewModel : ObservableObject
         priority = task.Priority;
         isCompleted = task.IsCompleted;
     }
+    public TaskViewModel(TaskService taskService = null)
+    {
+        _taskService = taskService ?? new TaskService();
+        DueDate = DateTime.Now;
+        Priority = TaskPriority.Medium;
+    }
     public TaskViewModel()
     {
+        _taskService = new TaskService();
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
     }
@@ -55,16 +66,16 @@ public partial class TaskViewModel : ObservableObject
     public ObservableCollection<TaskPriority> Priorities { get; } =
         new ObservableCollection<TaskPriority>((TaskPriority[])Enum.GetValues(typeof(TaskPriority)));
     
-    public TaskViewModel CopyFrom(Task task)
-    {
-        Id = task.Id;
-        Title = task.Title;
-        Description = task.Description;
-        DueDate = task.DueDate;
-        Priority = task.Priority;
-        IsCompleted = task.IsCompleted;
-        return this;
-    }
+    // public TaskViewModel CopyFrom(Task task)
+    // {
+    //     Id = task.Id;
+    //     Title = task.Title;
+    //     Description = task.Description;
+    //     DueDate = task.DueDate;
+    //     Priority = task.Priority;
+    //     IsCompleted = task.IsCompleted;
+    //     return this;
+    // }
     
     [RelayCommand]
     public void SaveTask()
@@ -81,12 +92,12 @@ public partial class TaskViewModel : ObservableObject
                 IsCompleted = IsCompleted
             };
 
-            TaskRepository.AddTask(newTask); 
+            _taskService.AddTask(newTask); 
             Id = newTask.Id;
         }
         else 
         {
-            var existingTask = TaskRepository.GetTaskById(Id);
+            var existingTask = _taskService.GetTaskById(Id);
             if (existingTask != null)
             {
                 existingTask.Id = Id;
@@ -96,7 +107,7 @@ public partial class TaskViewModel : ObservableObject
                 existingTask.Priority = Priority;
                 existingTask.IsCompleted = IsCompleted;
 
-                TaskRepository.UpdateTask(existingTask); 
+                _taskService.UpdateTask(existingTask); 
             }
         }
         Shell.Current.GoToAsync("..");

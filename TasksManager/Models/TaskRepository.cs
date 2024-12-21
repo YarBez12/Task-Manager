@@ -39,4 +39,13 @@ public class TaskRepository
             existingTask.IsCompleted = task.IsCompleted;
         }
     }
+    
+    public static void DeleteTask(int id)
+    {
+        var taskToDelete = _tasks.FirstOrDefault(t => t.Id == id);
+        if (taskToDelete != null)
+        {
+            _tasks.Remove(taskToDelete);
+        }
+    }
 }

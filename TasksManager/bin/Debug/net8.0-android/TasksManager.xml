@@ -12,6 +12,13 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.CurrentTasks">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskListViewModel.currentTasks"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.CompletedTasks">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskListViewModel.completedTasks"/>
         </member>
         <member name="P:TasksManager.ViewModels.TaskListViewModel.SelectedTask">
             <inheritdoc cref="F:TasksManager.ViewModels.TaskListViewModel.selectedTask"/>
@@ -52,6 +59,12 @@
         <member name="P:TasksManager.ViewModels.TaskListViewModel.NavigateToEditTaskCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.NavigateToEditTask(TasksManager.ViewModels.TaskViewModel)"/>.</summary>
         </member>
+        <member name="F:TasksManager.ViewModels.TaskListViewModel.unfinishTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.UnfinishTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.UnfinishTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.UnfinishTask(TasksManager.ViewModels.TaskViewModel)"/>.</summary>
+        </member>
         <member name="T:TasksManager.ViewModels.TaskViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -90,6 +103,12 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentTasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompletedTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompletedTasks" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedTask">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedTask" generated properties.</summary>
         </member>
@@ -113,6 +132,12 @@
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentTasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompletedTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompletedTasks" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedTask">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedTask" generated properties.</summary>

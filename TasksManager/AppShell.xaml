@@ -6,10 +6,16 @@
     xmlns:local="clr-namespace:TasksManager.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="TasksManager">
+    <TabBar>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        <Tab
+            Title="Current Tasks">
+            <ShellContent ContentTemplate="{DataTemplate local:CurrentTasksPage}"/>
+        </Tab>
+        <Tab
+            Title="Completed Tasks">
+            <ShellContent ContentTemplate="{DataTemplate local:CompletedTasksPage}"/>
+        </Tab>
+    </TabBar>
 
 </Shell>

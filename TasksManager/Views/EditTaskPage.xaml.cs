@@ -26,7 +26,7 @@ public partial class EditTaskPage : ContentPage
             DisplayAlert("Task",(task == null).ToString(), "OK");
             if (task != null)
             {
-                BindingContext = new TaskViewModel().CopyFrom(task);
+                BindingContext = new TaskViewModel(task);
             }
             
         }

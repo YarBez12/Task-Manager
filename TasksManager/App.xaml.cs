@@ -1,11 +1,12 @@
-﻿namespace TasksManager;
+﻿using TasksManager.Views;
+
+namespace TasksManager;
 
 public partial class App : Application
 {
     public App()
     {
         InitializeComponent();
-
         MainPage = new AppShell();
     }
 }

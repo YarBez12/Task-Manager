@@ -3,6 +3,7 @@ using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using TasksManager.Models;
+using TasksManager.Services;
 using TasksManager.Views;
 using Task = System.Threading.Tasks.Task;
 
@@ -10,23 +11,35 @@ namespace TasksManager.ViewModels;
 
 public partial class TaskListViewModel : ObservableObject
 {
-    public ObservableCollection<TaskViewModel> Tasks { get; set; } = new ObservableCollection<TaskViewModel>();
+    private readonly TaskService _taskService;
+    // public ObservableCollection<TaskViewModel> Tasks { get; set; }
 
+    [ObservableProperty] 
+    private ObservableCollection<TaskViewModel> currentTasks;
+
+    [ObservableProperty] 
+    private ObservableCollection<TaskViewModel> completedTasks;
+
+    // public TaskListViewModel(TaskService taskService)
+    // {
+    //     _taskService = taskService;
+    //     var tasksFromRepo = taskService.GetTasks();
+    //     var tasks = new ObservableCollection<TaskViewModel>(
+    //         tasksFromRepo.Select(task => new TaskViewModel(task))
+    //     );
+    //     CurrentTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => !t.IsCompleted));
+    //     CompletedTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => t.IsCompleted));
+    // }
+    
     public TaskListViewModel()
     {
-        var tasksFromRepo = TaskRepository.GetTasks();
-        Tasks = new ObservableCollection<TaskViewModel>(
-            tasksFromRepo.Select(task => new TaskViewModel(
-                task.Id,
-                task.Title,
-                task.Description,
-                task.DueDate,
-                task.Priority)
-            {
-                IsCompleted = task.IsCompleted,
-                Id = task.Id
-            })
+        _taskService = new TaskService();
+        var tasksFromRepo = _taskService.GetTasks();
+        var tasks = new ObservableCollection<TaskViewModel>(
+            tasksFromRepo.Select(task => new TaskViewModel(task))
         );
+        CurrentTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => !t.IsCompleted));
+        CompletedTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => t.IsCompleted));
     }
 
     [ObservableProperty]
@@ -37,7 +50,14 @@ public partial class TaskListViewModel : ObservableObject
     {
         if (task != null)
         {
-            Tasks.Remove(task);
+            _taskService.DeleteTask(task.Id);
+                 // Tasks.Remove(task);
+            // CurrentTasks.Remove(task); 
+            // CompletedTasks.Remove(task);
+            if (CurrentTasks.Contains(task))
+                CurrentTasks.Remove(task);
+            if (CompletedTasks.Contains(task))
+                CompletedTasks.Remove(task);
         }
     }
     
@@ -47,37 +67,54 @@ public partial class TaskListViewModel : ObservableObject
         if (task != null)
         {
             task.IsCompleted = true;
+            var existingTask = TaskRepository.GetTaskById(task.Id);
+            if (existingTask != null)
+            {
+                existingTask.IsCompleted = true;
+                TaskRepository.UpdateTask(existingTask);
+                // CurrentTasks.Remove(task); //
+                // CompletedTasks.Add(task); //
+                if (CurrentTasks.Contains(task))
+                    CurrentTasks.Remove(task);
+                if (!CompletedTasks.Contains(task))
+                    CompletedTasks.Add(task);
+            }
+            // OnPropertyChanged(nameof(CurrentTasks));
+            // OnPropertyChanged(nameof(CompletedTasks));
         }
     }
     
     [RelayCommand]
     private void DeleteCompletedTasks()
     {
-        var CompletedTasks = Tasks.Where(task => task.IsCompleted).ToList();
+        // var CompletedTasks = Tasks.Where(task => task.IsCompleted).ToList();
         foreach (var task in CompletedTasks)
         {
-            Tasks.Remove(task);
+            _taskService.DeleteTask(task.Id);
+                // Tasks.Remove(task);
         }
+        CompletedTasks.Clear();
     }
 
     [RelayCommand]
-    private void AddTask(TaskViewModel task)
+    private void AddTask(TaskViewModel taskViewModel)
     {
-        if (task != null)
+        if (taskViewModel != null)
         {
             var newTask = new Models.Task
             {
-                Id = task.Id,
-                Title = task.Title,
-                Description = task.Description,
-                DueDate = task.DueDate,
-                Priority = task.Priority,
-                IsCompleted = task.IsCompleted
+                Id = taskViewModel.Id,
+                Title = taskViewModel.Title,
+                Description = taskViewModel.Description,
+                DueDate = taskViewModel.DueDate,
+                Priority = taskViewModel.Priority,
+                IsCompleted = taskViewModel.IsCompleted
             };
 
-            TaskRepository.AddTask(newTask);
+            _taskService.AddTask(newTask);
 
-            Tasks.Add(new TaskViewModel(newTask));
+                // Tasks.Add(new TaskViewModel(newTask));
+            CurrentTasks.Add(new TaskViewModel(newTask));
         }
     }
 
@@ -96,23 +133,103 @@ public partial class TaskListViewModel : ObservableObject
         }
     }
     
+    // public void RefreshTasks()
+    // {
+    //     var tasksFromRepo = _taskService.GetTasks();
+    //     MainThread.BeginInvokeOnMainThread(() =>
+    //     {
+    //             // Tasks.Clear();
+    //         // CurrentTasks.Clear();
+    //         // CompletedTasks.Clear();
+    //         // foreach (var task in tasksFromRepo)
+    //         // {
+    //         //     var taskViewModel = new TaskViewModel(task);
+    //         //         // Tasks.Add(taskViewModel);
+    //         //     if (!task.IsCompleted)
+    //         //     {
+    //         //         CurrentTasks.Add(taskViewModel);
+    //         //     }
+    //         //     else
+    //         //     {
+    //         //         CompletedTasks.Add(taskViewModel);
+    //         //     }
+    //         //
+    //         // }
+    //         // CurrentTasks.ReplaceRange(tasksFromRepo.Where(t => !t.IsCompleted).Select(task => new TaskViewModel(task)));
+    //         // CompletedTasks.ReplaceRange(tasksFromRepo.Where(t => t.IsCompleted).Select(task => new TaskViewModel(task)));
+    //                 // var tasks = new ObservableCollection<TaskViewModel>(
+    //                 //     tasksFromRepo.Select(task => new TaskViewModel(task))
+    //                 // );
+    //                 // CurrentTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => !t.IsCompleted));
+    //                 // CompletedTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => t.IsCompleted));
+    //         SyncCollection(CurrentTasks, tasksFromRepo.Where(task => !task.IsCompleted));
+    //
+    //         // Синхронизация CompletedTasks
+    //         SyncCollection(CompletedTasks, tasksFromRepo.Where(task => task.IsCompleted));
+    //         // if (currentSelectedTaskId != null)
+    //         // {
+    //         //     SelectedTask = Tasks.FirstOrDefault(t => t.Id == currentSelectedTaskId);
+    //         // }
+    //         // OnPropertyChanged(nameof(CurrentTasks));
+    //         // OnPropertyChanged(nameof(CompletedTasks));
+    //     });
+    // }
+    
     public void RefreshTasks()
     {
-        var tasksFromRepo = TaskRepository.GetTasks();
-        var currentSelectedTaskId = SelectedTask?.Id; 
+        var tasksFromRepo = _taskService.GetTasks();
+        SyncCollection(CurrentTasks, tasksFromRepo.Where(t => !t.IsCompleted));
+        SyncCollection(CompletedTasks, tasksFromRepo.Where(t => t.IsCompleted));
+    }
 
-        MainThread.BeginInvokeOnMainThread(() =>
+    private void SyncCollection(ObservableCollection<TaskViewModel> targetCollection, IEnumerable<Models.Task> sourceCollection)
+    {
+        var sourceViewModels = sourceCollection.Select(task => new TaskViewModel(task)).ToList();
+        for (int i = targetCollection.Count - 1; i >= 0; i--)
         {
-            Tasks.Clear();
-            foreach (var task in tasksFromRepo)
+            var existingItem = targetCollection[i];
+            if (!sourceViewModels.Any(s => s.Id == existingItem.Id))
             {
-                Tasks.Add(new TaskViewModel(task));
+                targetCollection.Remove(existingItem);
             }
-            if (currentSelectedTaskId != null)
+        }
+        foreach (var sourceItem in sourceViewModels)
+        {
+            var existingItem = targetCollection.FirstOrDefault(t => t.Id == sourceItem.Id);
+            if (existingItem == null)
             {
-                SelectedTask = Tasks.FirstOrDefault(t => t.Id == currentSelectedTaskId);
+                targetCollection.Add(sourceItem);
             }
-        });
+            else
+            {
+                existingItem.Title = sourceItem.Title;
+                existingItem.Description = sourceItem.Description;
+                existingItem.DueDate = sourceItem.DueDate;
+                existingItem.Priority = sourceItem.Priority;
+                existingItem.IsCompleted = sourceItem.IsCompleted;
+            }
+        }
+    }
+    
+    [RelayCommand]
+    private void UnfinishTask(TaskViewModel task)
+    {
+        if (task != null)
+        {
+            task.IsCompleted = false;
+            if (CompletedTasks.Contains(task))
+            {
+                CompletedTasks.Remove(task);
+                CurrentTasks.Add(task);
+            }
+            var existingTask = _taskService.GetTaskById(task.Id);
+            if (existingTask != null)
+            {
+                existingTask.IsCompleted = false;
+                _taskService.UpdateTask(existingTask);
+            }
+            // RefreshTasks();
+        }
     }
     
 }
