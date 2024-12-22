@@ -53,6 +53,7 @@
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/Microsoft.Maui.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/Microsoft.Maui.Essentials.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/Microsoft.Maui.Graphics.dll
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/Plugin.LocalNotification.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/SQLite-net.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/SQLitePCLRaw.batteries_v2.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/SQLitePCLRaw.core.dll

@@ -112,4 +112,15 @@ public class TaskRepository
         await InitAsync();
         return await conn.Table<TasksManager.Models.Task>().DeleteAsync(t => t.IsCompleted);
     }
+    
+    public async System.Threading.Tasks.Task UpdateOverdueStatusesAsync()
+    {
+        var tasks = await GetTasksAsync();
+        foreach (var task in tasks.Where(t => !t.IsCompleted))
+        {
+            task.UpdateOverdueStatus();
+            await UpdateTaskAsync(task);
+        }
+    }
+
 }

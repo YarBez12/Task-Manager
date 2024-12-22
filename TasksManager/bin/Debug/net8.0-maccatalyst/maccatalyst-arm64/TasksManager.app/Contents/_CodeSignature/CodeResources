@@ -229,6 +229,13 @@
 			6KpadPWMTZH5AqRA0tgITxoOWIw+SO4BVLjsiQ/n5zA=
 			</data>
 		</dict>
+		<key>MonoBundle/Plugin.LocalNotification.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JbjFjRJuulc4KTK7Vi+TDc5+ALBbEAOHS6Tx0WFSThs=
+			</data>
+		</dict>
 		<key>MonoBundle/SQLite-net.dll</key>
 		<dict>
 			<key>hash2</key>
@@ -1388,14 +1395,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HspWA/Lw6nu/ke/oNuC0DYs2R8zJ36TNIOePiV+i5bU=
+			V13zt7X5mIJI6KreNaUyOMPhZz2nyybNfwhi1mPTcsM=
 			</data>
 		</dict>
 		<key>MonoBundle/TasksManager.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0l3fxBbhT+E9PvjTDHzu7wzgMTB3QoUHozOwqOV253Y=
+			mUYF2qnheoigwFO2JNmPgYtyAYUjw9MVaxoHtcuA1X8=
 			</data>
 		</dict>
 		<key>MonoBundle/WindowsBase.dll</key>
@@ -1409,7 +1416,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pLWX2u0SEQXnDhJ0J4gCS/tJus3M7T8sxAyPeJR+xAw=
+			ChrhkgCFP4XNEtjpRAL4Qx/KIuo69K1/bbdpGtoe0Ek=
 			</data>
 		</dict>
 		<key>MonoBundle/ar/Microsoft.Maui.Controls.resources.dll</key>

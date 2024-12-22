@@ -37,6 +37,7 @@ public partial class TaskListViewModel : ObservableObject
     // }
     
     private readonly TaskService _taskService;
+    private Timer _overdueUpdateTimer;
 
     [ObservableProperty] 
     private ObservableCollection<TaskViewModel> currentTasks;
@@ -53,7 +54,17 @@ public partial class TaskListViewModel : ObservableObject
         _taskService = new TaskService();
         CurrentTasks = new ObservableCollection<TaskViewModel>();
         CompletedTasks = new ObservableCollection<TaskViewModel>();
+        StartOverdueStatusUpdater();
         OnSelectedSortOptionChanged(SelectedSortOption);
+    }
+    
+    private void StartOverdueStatusUpdater()
+    {
+        _overdueUpdateTimer = new Timer(async _ =>
+        {
+            await _taskService.UpdateOverdueStatusesAsync();
+            await LoadTasksAsync();
+        }, null, TimeSpan.Zero, TimeSpan.FromMinutes(1));
     }
     partial void OnSelectedSortOptionChanged(string value)
     {
@@ -71,7 +82,7 @@ public partial class TaskListViewModel : ObservableObject
             ? tasksFromRepo.Where(t => SelectedCategories.Contains(t.Category))
             : tasksFromRepo;
         filteredTasks = SelectedCategories != null 
-            ? filteredTasks.Where(t => SelectedOverdueStatuses.Contains(t.IsOverdue))
+            ? filteredTasks.Where(t => SelectedOverdueStatuses.Contains(t.OverdueStatus))
             : filteredTasks;
         var sortedTasks = SelectedSortOption switch
         {
@@ -218,7 +229,7 @@ public partial class TaskListViewModel : ObservableObject
                 DueDate = taskViewModel.DueDate,
                 Priority = taskViewModel.Priority,
                 Category = taskViewModel.Category,
-                IsOverdue = taskViewModel.IsOverdue,
+                OverdueStatus = taskViewModel.OverdueStatus,
                 IsCompleted = taskViewModel.IsCompleted
             };
 

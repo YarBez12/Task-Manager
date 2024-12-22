@@ -30,7 +30,7 @@ public partial class TaskViewModel : ObservableObject
     private TaskCategory category;
     
     [ObservableProperty]
-    private TaskOverdueStatus isOverdue;
+    private TaskOverdueStatus overdueStatus;
 
     // public bool IsOverdue => !IsCompleted && DateTime.Now > DueDate;
 
@@ -54,7 +54,7 @@ public partial class TaskViewModel : ObservableObject
         dueDate = task.DueDate;
         priority = task.Priority;
         category = task.Category;
-        isOverdue = task.IsOverdue;
+        overdueStatus = task.OverdueStatus;
         isCompleted = task.IsCompleted;
     }
     public TaskViewModel(TaskService taskService = null)
@@ -62,7 +62,7 @@ public partial class TaskViewModel : ObservableObject
         _taskService = taskService ?? new TaskService();
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
-        isOverdue = TaskOverdueStatus.NotOverdue;
+        overdueStatus = TaskOverdueStatus.Upcoming;
         Category = TaskCategory.Work;
     }
     public TaskViewModel()
@@ -70,7 +70,7 @@ public partial class TaskViewModel : ObservableObject
         _taskService = new TaskService();
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
-        isOverdue = TaskOverdueStatus.NotOverdue;
+        overdueStatus = TaskOverdueStatus.Upcoming;
         Category = TaskCategory.Work;
     }
     
@@ -104,7 +104,7 @@ public partial class TaskViewModel : ObservableObject
                 DueDate = DueDate,
                 Priority = Priority,
                 Category = Category,
-                IsOverdue = IsOverdue,
+                OverdueStatus = OverdueStatus,
                 IsCompleted = IsCompleted
             };
 
@@ -129,7 +129,7 @@ public partial class TaskViewModel : ObservableObject
                 existingTask.Priority = Priority;
                 existingTask.Category = Category;
                 existingTask.IsCompleted = IsCompleted;
-                existingTask.IsOverdue = IsOverdue;
+                existingTask.OverdueStatus = OverdueStatus;
 
                 await _taskService.UpdateTaskAsync(existingTask); 
             }
@@ -142,6 +142,20 @@ public partial class TaskViewModel : ObservableObject
     {
         Shell.Current.GoToAsync("..");
     }
+    
+    partial void OnDueDateChanged(DateTime value)
+    {
+        var daysOverdue = (DateTime.Now.Date - value.Date).Days;
+
+        OverdueStatus = daysOverdue switch
+        {
+            < 0 => TaskOverdueStatus.Upcoming,
+            0 => TaskOverdueStatus.Today,
+            <= 7 => TaskOverdueStatus.Recent,
+            _ => TaskOverdueStatus.Critical,
+        };
+    }
+
     
     
 }

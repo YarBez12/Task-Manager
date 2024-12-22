@@ -85,6 +85,10 @@
               "version": "[8.0.10, )",
               "autoReferenced": true
             },
+            "Plugin.LocalNotification": {
+              "target": "Package",
+              "version": "[10.1.8, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.9.172, )"
@@ -144,6 +148,10 @@
               "version": "[8.0.10, )",
               "autoReferenced": true
             },
+            "Plugin.LocalNotification": {
+              "target": "Package",
+              "version": "[10.1.8, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.9.172, )"
@@ -202,6 +210,10 @@
               "target": "Package",
               "version": "[8.0.10, )",
               "autoReferenced": true
+            },
+            "Plugin.LocalNotification": {
+              "target": "Package",
+              "version": "[10.1.8, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

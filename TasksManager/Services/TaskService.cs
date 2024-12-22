@@ -43,4 +43,10 @@ public class TaskService
     {
         return await App.TaskRepository.DeleteCompletedTasksAsync();
     }
+    
+    public async System.Threading.Tasks.Task UpdateOverdueStatusesAsync()
+    {
+        await App.TaskRepository.UpdateOverdueStatusesAsync();
+    }
+
 }

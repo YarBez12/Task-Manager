@@ -141,8 +141,13 @@
         <member name="P:TasksManager.ViewModels.TaskViewModel.Category">
             <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.category"/>
         </member>
-        <member name="P:TasksManager.ViewModels.TaskViewModel.IsOverdue">
-            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.isOverdue"/>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.OverdueStatus">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.overdueStatus"/>
+        </member>
+        <member name="M:TasksManager.ViewModels.TaskViewModel.OnDueDateChanged(System.DateTime)">
+            <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.TaskViewModel.DueDate"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.TaskViewModel.DueDate"/> is changed.</remarks>
         </member>
         <member name="F:TasksManager.ViewModels.TaskViewModel.saveTaskCommand">
             <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskViewModel.SaveTaskCommand"/>.</summary>
@@ -327,8 +332,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Category">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Category" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsOverdue">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsOverdue" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OverdueStatus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OverdueStatus" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -381,8 +386,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Category">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Category" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsOverdue">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsOverdue" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OverdueStatus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OverdueStatus" generated properties.</summary>
         </member>
     </members>
 </doc>
