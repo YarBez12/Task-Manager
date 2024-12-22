@@ -17,6 +17,6 @@ public partial class CompletedTasksPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await ((TaskListViewModel)BindingContext).RefreshTasksAsync();
+        await ((TaskListViewModel)BindingContext).LoadTasksAsync();
     }
 }

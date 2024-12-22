@@ -47,6 +47,20 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>MonoBundle/CommunityToolkit.Maui.Core.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xzWWBEvR1TK67IbeUXw9qe+tT5IK5rq0uQvkq5BLIL8=
+			</data>
+		</dict>
+		<key>MonoBundle/CommunityToolkit.Maui.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Qsoas+yvVL7AcJAMDDsiSYfEU/GZjSdXxxAeyx8GDtg=
+			</data>
+		</dict>
 		<key>MonoBundle/CommunityToolkit.Mvvm.dll</key>
 		<dict>
 			<key>hash2</key>
@@ -1374,14 +1388,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+VvRdVpxGTNMxn/5W5JZ/eFlVhxPqZ3jHcIbxSUV/aA=
+			HspWA/Lw6nu/ke/oNuC0DYs2R8zJ36TNIOePiV+i5bU=
 			</data>
 		</dict>
 		<key>MonoBundle/TasksManager.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iNMRu76aaeBbpJn443tUZ1uLr1wayeZExxx6XD65UuY=
+			0l3fxBbhT+E9PvjTDHzu7wzgMTB3QoUHozOwqOV253Y=
 			</data>
 		</dict>
 		<key>MonoBundle/WindowsBase.dll</key>
@@ -1395,7 +1409,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			piEU6smIAzyCiKrGaqk4A9pA7sS9x2XtMkVwnoeqttU=
+			pLWX2u0SEQXnDhJ0J4gCS/tJus3M7T8sxAyPeJR+xAw=
 			</data>
 		</dict>
 		<key>MonoBundle/ar/Microsoft.Maui.Controls.resources.dll</key>

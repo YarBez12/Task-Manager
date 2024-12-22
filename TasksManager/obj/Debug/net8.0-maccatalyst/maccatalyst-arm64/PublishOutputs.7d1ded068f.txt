@@ -34,6 +34,8 @@
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/runtimeconfig.bin
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/CommunityToolkit.Maui.dll
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/CommunityToolkit.Maui.Core.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/CommunityToolkit.Mvvm.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/FluentValidation.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../TasksManager.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.dll

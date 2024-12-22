@@ -8,42 +8,86 @@
     <ContentPage.BindingContext>
         <vm:TaskListViewModel />
     </ContentPage.BindingContext>
-    <Grid>
-        <ScrollView>
-            <ListView ItemsSource="{Binding CurrentTasks}" 
-                      SelectionMode="Single"
-                      SeparatorVisibility="Default"
-                      SeparatorColor="Gray"
-                      SelectedItem="{Binding SelectedTask, Mode=TwoWay}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text = "{Binding Title}" 
-                                  Detail="{Binding DueDate, StringFormat='Due: {0:MM/dd/yyyy'}">
-                            <TextCell.ContextActions>
-                                <MenuItem Text = "Edit"
-                                          Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=NavigateToEditTaskCommand}"
-                                          CommandParameter="{Binding .}"/>
-                                <MenuItem Text = "Complete"
-                                          Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=CompleteTaskCommand}"
-                                          CommandParameter="{Binding .}"/>
-                                <MenuItem Text = "Delete"
-                                          Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=DeleteTaskCommand}"
-                                          CommandParameter="{Binding .}"/>
-                            </TextCell.ContextActions>
-                        </TextCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </ScrollView>
-            <Button Text="+" 
-                    Command="{Binding NavigateToAddTaskCommand}"
-                    BackgroundColor="Blue"
-                    TextColor="White"
-                    CornerRadius="30"
-                    WidthRequest="60"
-                    HeightRequest="60"
-                    HorizontalOptions="End"
-                    VerticalOptions="End"
-                    Margin="20"/>
+    <Grid RowDefinitions="Auto, *, Auto">
+        <!-- <VerticalStackLayout Grid.Row="0" Padding="10"> -->
+            <Grid RowDefinitions="Auto, Auto" 
+                  ColumnDefinitions="Auto, Auto"
+                  Grid.Row="0" 
+                  ColumnSpacing="20" 
+                  RowSpacing="10"
+                  Padding="20">
+                <Label Text = "Sort by"
+                       VerticalOptions="Center"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       />
+                <Picker Title="Sort by"
+                        SelectedItem="{Binding SelectedSortOption}"
+                        ItemsSource="{Binding SortOptions}"
+                        VerticalOptions="Center"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+                <!-- <Label Text = "Select categories" -->
+                <!--        VerticalOptions="Center" -->
+                <!--        Grid.Row="1" -->
+                <!--        Grid.Column="0" -->
+                <!-- /> -->
+                <!-- <Picker Title="Select categories" -->
+                <!--         SelectedItem="{Binding SelectedCategory}" -->
+                <!--         ItemsSource="{Binding Categories}" -->
+                <!--         VerticalOptions="Center" -->
+                <!--         Grid.Row="1" -->
+                <!--         Grid.Column="1"/> -->
+                <Button Grid.Row="1"
+                        Grid.Column="0"
+                        Text = "Select Categories"
+                        Command="{Binding ShowCategorySelectionCommand}"/>
+                <Button Grid.Row="1"
+                        Grid.Column="1"
+                        Text = "Filter Overdue"
+                        Command="{Binding ShowOverdueSelectionCommand}"/>
+                
+            </Grid>
+            <!-- <ScrollView> -->
+                <ListView ItemsSource="{Binding CurrentTasks}" 
+                          SelectionMode="Single"
+                          SeparatorVisibility="Default"
+                          SeparatorColor="Gray"
+                          SelectedItem="{Binding SelectedTask, Mode=TwoWay}"
+                          Grid.Row="1"
+                          >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text = "{Binding Title}" 
+                                      Detail="{Binding DueDate, StringFormat='Due: {0:MM/dd/yyyy'}">
+                                <TextCell.ContextActions>
+                                    <MenuItem Text = "Edit"
+                                              Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=NavigateToEditTaskCommand}"
+                                              CommandParameter="{Binding .}"/>
+                                    <MenuItem Text = "Complete"
+                                              Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=CompleteTaskCommand}"
+                                              CommandParameter="{Binding .}"/>
+                                    <MenuItem Text = "Delete"
+                                              Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TaskListViewModel}}, Path=DeleteTaskCommand}"
+                                              CommandParameter="{Binding .}"/>
+                                </TextCell.ContextActions>
+                            </TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            <!-- </ScrollView> -->
+            <!-- </VerticalStackLayout> -->
+       <Button Text="+"
+               Command="{Binding NavigateToAddTaskCommand}"
+               BackgroundColor="Blue"
+               TextColor="White"
+               CornerRadius="30"
+               WidthRequest="60"
+               HeightRequest="60"
+               HorizontalOptions="End"
+               VerticalOptions="End"
+               Margin="20"
+               Grid.Row="2"/>
+    
     </Grid>
 </ContentPage>

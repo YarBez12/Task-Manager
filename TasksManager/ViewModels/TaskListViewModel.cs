@@ -1,67 +1,101 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-// using TasksManager.Models;
+using TasksManager.Models;
 using TasksManager.Services;
 using TasksManager.Views;
-// using Task = System.Threading.Tasks.Task;
+using Task = System.Threading.Tasks.Task;
 
 namespace TasksManager.ViewModels;
 
 public partial class TaskListViewModel : ObservableObject
 {
+    public SelectionItemListViewModel<TaskCategory> CategoryList { get; }
+    public SelectionItemListViewModel<TaskOverdueStatus> OverdueStatusList { get; }
+    [ObservableProperty]
+    private List<TaskCategory>? selectedCategories;
+    [ObservableProperty]
+    private List<TaskOverdueStatus> selectedOverdueStatuses;
+
+    [ObservableProperty]
+    private string selectedSortOption;
+
+    public List<string> SortOptions { get; } = new List<string>
+    {
+        "Alphabetically",
+        "By Due Date",
+        "By Priority",
+    };
+    
+    // [RelayCommand]
+    // private async System.Threading.Tasks.Task SetCategoryFilter(TaskCategory? category)
+    // {
+    //     SelectedCategory = category;
+    //     await LoadTasksAsync();
+    // }
+    
     private readonly TaskService _taskService;
-    // public ObservableCollection<TaskViewModel> Tasks { get; set; }
 
     [ObservableProperty] 
     private ObservableCollection<TaskViewModel> currentTasks;
 
     [ObservableProperty] 
     private ObservableCollection<TaskViewModel> completedTasks;
-
-    // public TaskListViewModel(TaskService taskService)
-    // {
-    //     _taskService = taskService;
-    //     var tasksFromRepo = taskService.GetTasks();
-    //     var tasks = new ObservableCollection<TaskViewModel>(
-    //         tasksFromRepo.Select(task => new TaskViewModel(task))
-    //     );
-    //     CurrentTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => !t.IsCompleted));
-    //     CompletedTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => t.IsCompleted));
-    // }
     
     public TaskListViewModel()
     {
+        CategoryList = new SelectionItemListViewModel<TaskCategory>();
+        SelectedCategories = CategoryList.GetSelectedItems();
+        OverdueStatusList = new SelectionItemListViewModel<TaskOverdueStatus>();
+        SelectedOverdueStatuses = OverdueStatusList.GetSelectedItems();
         _taskService = new TaskService();
-        // var tasksFromRepo = _taskService.GetTasks();
-        // var tasks = new ObservableCollection<TaskViewModel>(
-        //     tasksFromRepo.Select(task => new TaskViewModel(task))
-        // );
-        // CurrentTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => !t.IsCompleted));
-        // CompletedTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => t.IsCompleted));
         CurrentTasks = new ObservableCollection<TaskViewModel>();
         CompletedTasks = new ObservableCollection<TaskViewModel>();
+        OnSelectedSortOptionChanged(SelectedSortOption);
+    }
+    partial void OnSelectedSortOptionChanged(string value)
+    {
         LoadTasksAsync();
     }
-
+    
+    // public ObservableCollection<TaskCategory> Categories { get; } =
+    //     new ObservableCollection<TaskCategory>((TaskCategory[])Enum.GetValues(typeof(TaskCategory)));
+    
     public async Task LoadTasksAsync()
     {
+        SelectedSortOption = SelectedSortOption ?? "Alphabetically";
         var tasksFromRepo = await _taskService.GetTasksAsync();
+        var filteredTasks = SelectedCategories != null 
+            ? tasksFromRepo.Where(t => SelectedCategories.Contains(t.Category))
+            : tasksFromRepo;
+        filteredTasks = SelectedCategories != null 
+            ? filteredTasks.Where(t => SelectedOverdueStatuses.Contains(t.IsOverdue))
+            : filteredTasks;
+        var sortedTasks = SelectedSortOption switch
+        {
+            "Alphabetically" => filteredTasks.OrderBy(t => t.Title),
+            "By Due Date" => filteredTasks.OrderBy(t => t.DueDate),
+            "By Priority" => filteredTasks.OrderBy(t => t.Priority),
+            // _ => filteredTasks
+        };
+        
         MainThread.BeginInvokeOnMainThread(() =>
         {
-            foreach (var task in CurrentTasks)
-            {
-                CurrentTasks.Remove(task);
-            }
-            foreach (var task in CompletedTasks)
-            {
-                CompletedTasks.Remove(task);
-            }
-            // CurrentTasks.Clear();
-            // CompletedTasks.Clear();
+            // foreach (var task in CurrentTasks)
+            // {
+            //     CurrentTasks.Remove(task);
+            // }
+            //
+            // foreach (var task in CompletedTasks)
+            // {
+            //     CompletedTasks.Remove(task);
+            // }
+            CurrentTasks.Clear();
+            CompletedTasks.Clear();
 
-            var tasks = tasksFromRepo.Select(task => new TaskViewModel(task)).ToList();
+            var tasks = sortedTasks.Select(task => new TaskViewModel(task)).ToList();
 
             foreach (var task in tasks.Where(t => !t.IsCompleted))
             {
@@ -75,6 +109,49 @@ public partial class TaskListViewModel : ObservableObject
         });
         
     }
+    // public async System.Threading.Tasks.Task RefreshTasksAsync()
+    // {
+    //     var tasksFromRepo = await _taskService.GetTasksAsync();
+    //     MainThread.BeginInvokeOnMainThread(() =>
+    //     {
+    //         SyncCollection(CurrentTasks, tasksFromRepo.Where(task => !task.IsCompleted));
+    //         SyncCollection(CompletedTasks, tasksFromRepo.Where(task => task.IsCompleted));
+    //     });
+    // }
+
+
+    
+    // private void SyncCollection(ObservableCollection<TaskViewModel> targetCollection, IEnumerable<Models.Task> sourceCollection)
+    // {
+    //     var sourceTasks = sourceCollection.Select(task => new TaskViewModel(task)).ToList();
+    //
+    //     for (int i = targetCollection.Count - 1; i >= 0; i--)
+    //     {
+    //         var item = targetCollection[i];
+    //         if (!sourceTasks.Any(t => t.Id == item.Id))
+    //         {
+    //             targetCollection.Remove(item);
+    //         }
+    //     }
+    //
+    //     foreach (var sourceTask in sourceTasks)
+    //     {
+    //         var existingItem = targetCollection.FirstOrDefault(t => t.Id == sourceTask.Id);
+    //         if (existingItem == null)
+    //         {
+    //             targetCollection.Add(sourceTask); 
+    //         }
+    //         else
+    //         {
+    //             existingItem.Title = sourceTask.Title;
+    //             existingItem.Description = sourceTask.Description;
+    //             existingItem.DueDate = sourceTask.DueDate;
+    //             existingItem.Priority = sourceTask.Priority;
+    //             existingItem.Category = sourceTask.Category;
+    //             existingItem.IsCompleted = sourceTask.IsCompleted;
+    //         }
+    //     }
+    // }
 
     [ObservableProperty]
     private TaskViewModel selectedTask;
@@ -85,15 +162,6 @@ public partial class TaskListViewModel : ObservableObject
         if (task != null)
         {
             var result = await _taskService.DeleteTaskAsync(task.Id);
-            // await _taskService.DeleteTaskAsync(task.Id);
-            // _taskService.DeleteTask(task.Id);
-                 // Tasks.Remove(task);
-            // CurrentTasks.Remove(task); 
-            // CompletedTasks.Remove(task);
-                    // if (CurrentTasks.Contains(task))
-                    //     CurrentTasks.Remove(task);
-                    // if (CompletedTasks.Contains(task))
-                    //     CompletedTasks.Remove(task);
             if (result > 0) 
             {
                 MainThread.BeginInvokeOnMainThread(() =>
@@ -119,8 +187,6 @@ public partial class TaskListViewModel : ObservableObject
             {
                 existingTask.IsCompleted = true;
                 await _taskService.UpdateTaskAsync(existingTask);
-                // CurrentTasks.Remove(task); //
-                // CompletedTasks.Add(task); //
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
                     if (CurrentTasks.Contains(task))
@@ -129,8 +195,6 @@ public partial class TaskListViewModel : ObservableObject
                         CompletedTasks.Add(task);
                 });
             }
-            // OnPropertyChanged(nameof(CurrentTasks));
-            // OnPropertyChanged(nameof(CompletedTasks));
         }
     }
     
@@ -153,11 +217,12 @@ public partial class TaskListViewModel : ObservableObject
                 Description = taskViewModel.Description,
                 DueDate = taskViewModel.DueDate,
                 Priority = taskViewModel.Priority,
+                Category = taskViewModel.Category,
+                IsOverdue = taskViewModel.IsOverdue,
                 IsCompleted = taskViewModel.IsCompleted
             };
 
             await _taskService.AddTaskAsync(newTask);
-                // Tasks.Add(new TaskViewModel(newTask));
                 CurrentTasks.Add(new TaskViewModel(newTask));
         }
     }
@@ -177,128 +242,9 @@ public partial class TaskListViewModel : ObservableObject
         }
     }
     
-    // public void RefreshTasks()
-    // {
-    //     var tasksFromRepo = _taskService.GetTasks();
-    //     MainThread.BeginInvokeOnMainThread(() =>
-    //     {
-    //             // Tasks.Clear();
-    //         // CurrentTasks.Clear();
-    //         // CompletedTasks.Clear();
-    //         // foreach (var task in tasksFromRepo)
-    //         // {
-    //         //     var taskViewModel = new TaskViewModel(task);
-    //         //         // Tasks.Add(taskViewModel);
-    //         //     if (!task.IsCompleted)
-    //         //     {
-    //         //         CurrentTasks.Add(taskViewModel);
-    //         //     }
-    //         //     else
-    //         //     {
-    //         //         CompletedTasks.Add(taskViewModel);
-    //         //     }
-    //         //
-    //         // }
-    //         // CurrentTasks.ReplaceRange(tasksFromRepo.Where(t => !t.IsCompleted).Select(task => new TaskViewModel(task)));
-    //         // CompletedTasks.ReplaceRange(tasksFromRepo.Where(t => t.IsCompleted).Select(task => new TaskViewModel(task)));
-    //                 // var tasks = new ObservableCollection<TaskViewModel>(
-    //                 //     tasksFromRepo.Select(task => new TaskViewModel(task))
-    //                 // );
-    //                 // CurrentTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => !t.IsCompleted));
-    //                 // CompletedTasks = new ObservableCollection<TaskViewModel>(tasks.Where(t => t.IsCompleted));
-    //         SyncCollection(CurrentTasks, tasksFromRepo.Where(task => !task.IsCompleted));
-    //
-    //         // Синхронизация CompletedTasks
-    //         SyncCollection(CompletedTasks, tasksFromRepo.Where(task => task.IsCompleted));
-    //         // if (currentSelectedTaskId != null)
-    //         // {
-    //         //     SelectedTask = Tasks.FirstOrDefault(t => t.Id == currentSelectedTaskId);
-    //         // }
-    //         // OnPropertyChanged(nameof(CurrentTasks));
-    //         // OnPropertyChanged(nameof(CompletedTasks));
-    //     });
-    // }
     
-    // public async Task RefreshTasksAsync()
-    // {
-    //     var tasksFromRepo = await _taskService.GetTasksAsync();
-    //     SyncCollection(CurrentTasks, tasksFromRepo.Where(t => !t.IsCompleted));
-    //     SyncCollection(CompletedTasks, tasksFromRepo.Where(t => t.IsCompleted));
-    // }
     
-    public async System.Threading.Tasks.Task RefreshTasksAsync()
-    {
-        var tasksFromRepo = await _taskService.GetTasksAsync();
-        MainThread.BeginInvokeOnMainThread(() =>
-        {
-            SyncCollection(CurrentTasks, tasksFromRepo.Where(task => !task.IsCompleted));
-            SyncCollection(CompletedTasks, tasksFromRepo.Where(task => task.IsCompleted));
-        });
-    }
-
-
-    // private void SyncCollection(ObservableCollection<TaskViewModel> targetCollection, IEnumerable<Models.Task> sourceCollection)
-    // {
-    //     var sourceViewModels = sourceCollection.Select(task => new TaskViewModel(task)).ToList();
-    //     for (int i = targetCollection.Count - 1; i >= 0; i--)
-    //     {
-    //         var existingItem = targetCollection[i];
-    //         if (!sourceViewModels.Any(s => s.Id == existingItem.Id))
-    //         {
-    //             targetCollection.Remove(existingItem);
-    //         }
-    //     }
-    //     foreach (var sourceItem in sourceViewModels)
-    //     {
-    //         var existingItem = targetCollection.FirstOrDefault(t => t.Id == sourceItem.Id);
-    //         if (existingItem == null)
-    //         {
-    //             targetCollection.Add(sourceItem);
-    //         }
-    //         else
-    //         {
-    //             existingItem.Title = sourceItem.Title;
-    //             existingItem.Description = sourceItem.Description;
-    //             existingItem.DueDate = sourceItem.DueDate;
-    //             existingItem.Priority = sourceItem.Priority;
-    //             existingItem.IsCompleted = sourceItem.IsCompleted;
-    //         }
-    //     }
-    // }
     
-    private void SyncCollection(ObservableCollection<TaskViewModel> targetCollection, IEnumerable<Models.Task> sourceCollection)
-    {
-        var sourceTasks = sourceCollection.Select(task => new TaskViewModel(task)).ToList();
-
-        // Удаляем элементы, отсутствующие в источнике
-        for (int i = targetCollection.Count - 1; i >= 0; i--)
-        {
-            var item = targetCollection[i];
-            if (!sourceTasks.Any(t => t.Id == item.Id))
-            {
-                targetCollection.Remove(item);
-            }
-        }
-
-        // Добавляем или обновляем элементы
-        foreach (var sourceTask in sourceTasks)
-        {
-            var existingItem = targetCollection.FirstOrDefault(t => t.Id == sourceTask.Id);
-            if (existingItem == null)
-            {
-                targetCollection.Add(sourceTask); // Добавляем новые
-            }
-            else
-            {
-                // Обновляем существующие
-                existingItem.Title = sourceTask.Title;
-                existingItem.Description = sourceTask.Description;
-                existingItem.DueDate = sourceTask.DueDate;
-                existingItem.Priority = sourceTask.Priority;
-                existingItem.IsCompleted = sourceTask.IsCompleted;
-            }
-        }
-    }
 
 
     
@@ -309,12 +255,6 @@ public partial class TaskListViewModel : ObservableObject
         {
             task.IsCompleted = false;
             var existingTask = await _taskService.GetTaskByIdAsync(task.Id);
-            // if (CompletedTasks.Contains(task))
-            // {
-            //     CompletedTasks.Remove(task);
-            //     CurrentTasks.Add(task);
-            // }
-            // var existingTask = _taskService.GetTaskById(task.Id);
             if (existingTask != null)
             {
                 existingTask.IsCompleted = false;
@@ -325,7 +265,32 @@ public partial class TaskListViewModel : ObservableObject
                     CurrentTasks.Add(task);
                 });
             }
-            // RefreshTasks();
+        }
+    }
+
+    [RelayCommand]
+    private async System.Threading.Tasks.Task ShowCategorySelection()
+    {
+        var popup = new CategorySelectionPopup();
+        popup.BindingContext = CategoryList;
+        var result = await Application.Current?.MainPage?.ShowPopupAsync(popup);
+        if (result is bool isOk && isOk)
+        {
+            SelectedCategories = CategoryList.GetSelectedItems();
+            await LoadTasksAsync();
+        }
+    }
+    
+    [RelayCommand]
+    private async System.Threading.Tasks.Task ShowOverdueSelection()
+    {
+        var popup = new OverdueSelectionPopup();
+        popup.BindingContext = OverdueStatusList;
+        var result = await Application.Current?.MainPage?.ShowPopupAsync(popup);
+        if (result is bool isOk && isOk)
+        {
+            SelectedOverdueStatuses = OverdueStatusList.GetSelectedItems();
+            await LoadTasksAsync();
         }
     }
     

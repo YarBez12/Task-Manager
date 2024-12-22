@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- <toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui" -->
+<!--                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" -->
+<!--                xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" -->
+<!--                x:Class="TasksManager.Views.Controls.SelectionPopupControl"> -->
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TasksManager.Views.Controls.SelectionPopupControl">
+    <VerticalStackLayout Padding="20" Spacing="10" BackgroundColor="White">
+        <Label Text="Select Categories"
+               x:Name="titleLabel"
+               FontSize="20"
+               HorizontalOptions="Center" />
+        <ScrollView>
+            <VerticalStackLayout>
+                <HorizontalStackLayout Padding="20,0,0,0">
+                    <CheckBox IsChecked="{Binding AreAllItemsSelected}" />
+                    <Label Text="All"
+                        VerticalOptions="Center" />
+                    <!-- Text="All Categories"  -->
+                </HorizontalStackLayout>
+                <!-- <Label Text="All Categories" -->
+                <!--        HorizontalOptions="Center" -->
+                <!--        VerticalOptions="Center"/> -->
+                <CollectionView ItemsSource="{Binding Items}" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <HorizontalStackLayout>
+                                <CheckBox IsChecked="{Binding IsSelected}" />
+                                <Label Text="{Binding Name}" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Button Text="OK" Clicked="OnSaveCommand" />
+            <Button Text="Cancel" Clicked="OnCloseCommand" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentView>

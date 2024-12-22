@@ -11,8 +11,9 @@ public class Task
     protected DateTime StartDate { get; set; } = DateTime.Now;
     public DateTime DueDate { get; set; }
     public TaskPriority Priority { get; set; } = TaskPriority.Low;
+    public TaskCategory Category { get; set; } = TaskCategory.Other; // Новое поле
     public bool IsCompleted { get; set; } = false;
-    public bool IsOverdue { get; set; } = false;
+    public TaskOverdueStatus IsOverdue { get; set; } = TaskOverdueStatus.NotOverdue;
     
     public override string ToString()
     {

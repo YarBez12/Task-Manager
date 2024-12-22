@@ -3,7 +3,7 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TasksManager.Views.Controls.TaskControl">
-    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
           ColumnDefinitions="Auto, *"
           ColumnSpacing="20">
         <Label Text = "Title"
@@ -48,7 +48,19 @@
                 Grid.Column="1"
                 VerticalOptions="Center">
         </Picker>
-        <HorizontalStackLayout Grid.Row="4" Grid.ColumnSpan="2" Spacing="30" HorizontalOptions="Center">
+        <Label Text = "Category"
+               Grid.Row="4"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="End"/>
+        <Picker Title="Select Category"
+                SelectedItem="{Binding Category}"
+                ItemsSource = "{Binding Categories}"
+                Grid.Row="4"
+                Grid.Column="1"
+                VerticalOptions="Center">
+        </Picker>
+        <HorizontalStackLayout Grid.Row="5" Grid.ColumnSpan="2" Spacing="30" HorizontalOptions="Center">
                <Button Text="Save"
                        Command="{Binding SaveTaskCommand}"
                        BackgroundColor="Green"

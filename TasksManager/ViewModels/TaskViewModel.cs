@@ -26,19 +26,24 @@ public partial class TaskViewModel : ObservableObject
 
     [ObservableProperty]
     private bool isCompleted;
+    [ObservableProperty]
+    private TaskCategory category;
+    
+    [ObservableProperty]
+    private TaskOverdueStatus isOverdue;
 
-    public bool IsOverdue => !IsCompleted && DateTime.Now > DueDate;
+    // public bool IsOverdue => !IsCompleted && DateTime.Now > DueDate;
 
-    public TaskViewModel(int id, string title, string description, DateTime dueDate, TaskPriority priority, TaskService taskService = null)
-    {
-        _taskService = taskService ?? new TaskService();
-        Id = id;
-        Title = title;
-        Description = description;
-        DueDate = dueDate;
-        Priority = priority;
-        IsCompleted = false;
-    }
+    // public TaskViewModel(int id, string title, string description, DateTime dueDate, TaskPriority priority, TaskService taskService = null)
+    // {
+    //     _taskService = taskService ?? new TaskService();
+    //     Id = id;
+    //     Title = title;
+    //     Description = description;
+    //     DueDate = dueDate;
+    //     Priority = priority;
+    //     IsCompleted = false;
+    // }
 
     public TaskViewModel(TasksManager.Models.Task task, TaskService taskService = null)
     {
@@ -48,6 +53,8 @@ public partial class TaskViewModel : ObservableObject
         description = task.Description;
         dueDate = task.DueDate;
         priority = task.Priority;
+        category = task.Category;
+        isOverdue = task.IsOverdue;
         isCompleted = task.IsCompleted;
     }
     public TaskViewModel(TaskService taskService = null)
@@ -55,16 +62,23 @@ public partial class TaskViewModel : ObservableObject
         _taskService = taskService ?? new TaskService();
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
+        isOverdue = TaskOverdueStatus.NotOverdue;
+        Category = TaskCategory.Work;
     }
     public TaskViewModel()
     {
         _taskService = new TaskService();
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
+        isOverdue = TaskOverdueStatus.NotOverdue;
+        Category = TaskCategory.Work;
     }
     
     public ObservableCollection<TaskPriority> Priorities { get; } =
         new ObservableCollection<TaskPriority>((TaskPriority[])Enum.GetValues(typeof(TaskPriority)));
+    
+    public ObservableCollection<TaskCategory> Categories { get; } =
+        new ObservableCollection<TaskCategory>((TaskCategory[])Enum.GetValues(typeof(TaskCategory)));
     
     // public TaskViewModel CopyFrom(Task task)
     // {
@@ -89,6 +103,8 @@ public partial class TaskViewModel : ObservableObject
                 Description = Description,
                 DueDate = DueDate,
                 Priority = Priority,
+                Category = Category,
+                IsOverdue = IsOverdue,
                 IsCompleted = IsCompleted
             };
 
@@ -111,7 +127,9 @@ public partial class TaskViewModel : ObservableObject
                 existingTask.Description = Description;
                 existingTask.DueDate = DueDate;
                 existingTask.Priority = Priority;
+                existingTask.Category = Category;
                 existingTask.IsCompleted = IsCompleted;
+                existingTask.IsOverdue = IsOverdue;
 
                 await _taskService.UpdateTaskAsync(existingTask); 
             }

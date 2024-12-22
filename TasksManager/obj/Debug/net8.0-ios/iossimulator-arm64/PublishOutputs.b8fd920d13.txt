@@ -34,6 +34,8 @@
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/runtimeconfig.bin
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/CommunityToolkit.Maui.dll
+/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/CommunityToolkit.Maui.Core.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/CommunityToolkit.Mvvm.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/FluentValidation.dll
 /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../TasksManager.app/Microsoft.Extensions.Configuration.dll
