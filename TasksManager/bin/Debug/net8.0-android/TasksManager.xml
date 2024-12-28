@@ -4,6 +4,117 @@
         <name>TasksManager</name>
     </assembly>
     <members>
+        <member name="T:TasksManager.ViewModels.DayScheduleViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.Date">
+            <inheritdoc cref="F:TasksManager.ViewModels.DayScheduleViewModel.date"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.Exercises">
+            <inheritdoc cref="F:TasksManager.ViewModels.DayScheduleViewModel.exercises"/>
+        </member>
+        <member name="F:TasksManager.ViewModels.DayScheduleViewModel.addExerciseCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.DayScheduleViewModel.AddExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.AddExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.DayScheduleViewModel.AddExercise(System.DateTime)"/>.</summary>
+        </member>
+        <member name="T:TasksManager.ViewModels.ExerciseViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.SelectedHour">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.selectedHour"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.SelectedMinute">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.selectedMinute"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.TaskName">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.taskName"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.Essence">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.essence"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.Date">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.date"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.Duration">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.duration"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.IsCompleted">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.isCompleted"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.IsExpired">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.isExpired"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.Priority">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.priority"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.IsLast">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.isLast"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.Tasks">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.tasks"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.SelectedTask">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.selectedTask"/>
+        </member>
+        <member name="M:TasksManager.ViewModels.ExerciseViewModel.OnSelectedHourChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.ExerciseViewModel.SelectedHour"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.ExerciseViewModel.SelectedHour"/> is changed.</remarks>
+        </member>
+        <member name="M:TasksManager.ViewModels.ExerciseViewModel.OnSelectedMinuteChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.ExerciseViewModel.SelectedMinute"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.ExerciseViewModel.SelectedMinute"/> is changed.</remarks>
+        </member>
+        <member name="F:TasksManager.ViewModels.ExerciseViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.ExerciseViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.ExerciseViewModel.Save"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.ExerciseViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.ExerciseViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.ExerciseViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:TasksManager.ViewModels.ScheduleViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ScheduleViewModel.SelectedWeekStart">
+            <inheritdoc cref="F:TasksManager.ViewModels.ScheduleViewModel.selectedWeekStart"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ScheduleViewModel.DisplayedWeekRange">
+            <inheritdoc cref="F:TasksManager.ViewModels.ScheduleViewModel.displayedWeekRange"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ScheduleViewModel.CanNavigateToPreviousWeek">
+            <inheritdoc cref="F:TasksManager.ViewModels.ScheduleViewModel.canNavigateToPreviousWeek"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ScheduleViewModel.CanNavigateToNextWeek">
+            <inheritdoc cref="F:TasksManager.ViewModels.ScheduleViewModel.canNavigateToNextWeek"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ScheduleViewModel.WeekSchedule">
+            <inheritdoc cref="F:TasksManager.ViewModels.ScheduleViewModel.weekSchedule"/>
+        </member>
+        <member name="F:TasksManager.ViewModels.ScheduleViewModel.previousWeekCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.ScheduleViewModel.PreviousWeekCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.ScheduleViewModel.PreviousWeekCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.ScheduleViewModel.PreviousWeek"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.ScheduleViewModel.nextWeekCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.ScheduleViewModel.NextWeekCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.ScheduleViewModel.NextWeekCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.ScheduleViewModel.NextWeek"/>.</summary>
+        </member>
         <member name="T:TasksManager.ViewModels.SelectionItemListViewModel`1">
             <inheritdoc/>
         </member>
@@ -287,6 +398,60 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Exercises">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Exercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedHour">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedHour" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedMinute">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedMinute" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TaskName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TaskName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Essence">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Essence" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Duration">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Duration" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsExpired">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsExpired" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Priority">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Priority" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLast">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLast" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Tasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Tasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedTask">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedTask" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedWeekStart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedWeekStart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayedWeekRange">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayedWeekRange" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CanNavigateToPreviousWeek">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CanNavigateToPreviousWeek" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CanNavigateToNextWeek">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CanNavigateToNextWeek" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WeekSchedule">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WeekSchedule" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Items">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Items" generated properties.</summary>
         </member>
@@ -311,9 +476,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompletedTasks">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompletedTasks" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedTask">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedTask" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
         </member>
@@ -322,12 +484,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DueDate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DueDate" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Priority">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Priority" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCompleted">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Category">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Category" generated properties.</summary>
@@ -340,6 +496,60 @@
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Exercises">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Exercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedHour">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedHour" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedMinute">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedMinute" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TaskName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TaskName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Essence">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Essence" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Duration">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Duration" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsExpired">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsExpired" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Priority">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Priority" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLast">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLast" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Tasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Tasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedTask">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedTask" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedWeekStart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedWeekStart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayedWeekRange">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayedWeekRange" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanNavigateToPreviousWeek">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanNavigateToPreviousWeek" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanNavigateToNextWeek">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanNavigateToNextWeek" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WeekSchedule">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WeekSchedule" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Items">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Items" generated properties.</summary>
@@ -365,9 +575,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompletedTasks">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompletedTasks" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedTask">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedTask" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
         </member>
@@ -376,12 +583,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DueDate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DueDate" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Priority">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Priority" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCompleted">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Category">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Category" generated properties.</summary>

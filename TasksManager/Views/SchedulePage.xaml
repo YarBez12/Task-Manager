@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TasksManager.ViewModels"
+             x:Class="TasksManager.Views.SchedulePage"
+             Title="Schedule">
+    <ContentPage.BindingContext>
+        <vm:ScheduleViewModel />
+    </ContentPage.BindingContext>
+    
+    <Grid RowDefinitions="Auto, *" Padding="10">
+        <Grid ColumnDefinitions="Auto, *, Auto" Grid.Row="0" ColumnSpacing="10" Padding="10">
+            <Button Text="←" 
+                    Command="{Binding PreviousWeekCommand}" 
+                    IsEnabled="{Binding CanNavigateToPreviousWeek}"
+                    Grid.Column="0"/>
+
+            <Label Text="{Binding DisplayedWeekRange}" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="16" 
+                   VerticalTextAlignment="Center" 
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"/>
+
+            <Button Text="→" 
+                    Command="{Binding NextWeekCommand}" 
+                    IsEnabled="{Binding CanNavigateToNextWeek}" 
+                    Grid.Column="2"/>
+        </Grid>
+        
+        <CollectionView Grid.Row="1"
+            ItemsSource="{Binding WeekSchedule}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Spacing="20">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <Label Text="{Binding Date, StringFormat='{0:dddd, MMM d}'}" 
+                                   FontSize="18" FontAttributes="Bold"
+                                   Grid.Column="0"/>
+                            <Button Text="+" 
+                                    Command="{Binding AddExerciseCommand}"
+                                    CommandParameter="{Binding Date}"
+                                    HorizontalOptions="End"
+                                    Grid.Column="1"/>
+                        </Grid>
+
+                        <CollectionView ItemsSource="{Binding Exercises}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame Margin="5">
+                                        <VerticalStackLayout>
+                                            <Label Text="{Binding Essence}" 
+                                                   FontSize="16" />
+                                            <Label Text="{Binding Duration, StringFormat='Duration: {0:hh\\:mm}'}" 
+                                                   FontSize="14" />
+                                            <Label Text="{Binding TaskName}" 
+                                                   FontSize="12" />
+                                        </VerticalStackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

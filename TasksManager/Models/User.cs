@@ -6,7 +6,6 @@ public class User
     public string Name { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     private string PasswordHash { get; set; } = string.Empty;
-    public UserRole Role { get; set; } = UserRole.User;
     public DateTime RegisterDate { get; private set; } = DateTime.Now;
     public List<Task> Tasks { get; set; } = new List<Task>();
     
@@ -17,7 +16,7 @@ public class User
 
     public override string ToString()
     {
-        return $"{Name} ({Email}, Role: {Role}, Registered At: {RegisterDate:MM/dd/yyyy})";
+        return $"{Name} ({Email}, Registered At: {RegisterDate:MM/dd/yyyy})";
     }
     
 }

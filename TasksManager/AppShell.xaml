@@ -16,6 +16,10 @@
             Title="Completed Tasks">
             <ShellContent ContentTemplate="{DataTemplate local:CompletedTasksPage}"/>
         </Tab>
+        <Tab
+            Title="Schedule">
+            <ShellContent ContentTemplate="{DataTemplate local:SchedulePage}"></ShellContent>
+        </Tab>
     </TabBar>
 
 </Shell>
