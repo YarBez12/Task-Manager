@@ -21,6 +21,16 @@ public class ExerciseService
     {
         return await App.ExerciseRepository.UpdateExerciseAsync(exercise);
     }
+    
+    // public async System.Threading.Tasks.Task<int> UpdateExerciseAsync(int id)
+    // {
+    //     var exercise = await App.ExerciseRepository.GetExerciseByIdAsync(id);
+    //     if (exercise != null)
+    //     {
+    //         return await App.ExerciseRepository.UpdateExerciseAsync(exercise);
+    //     }
+    //     return -1;
+    // }
 
     public async System.Threading.Tasks.Task<int> DeleteExerciseAsync(TasksManager.Models.Exercise exercise)
     {
@@ -43,9 +53,10 @@ public class ExerciseService
         return await App.ExerciseRepository.DeleteCompletedExercisesAsync();
     }
 
-    public async System.Threading.Tasks.Task UpdateCompletedStatusesAsync()
+    public async System.Threading.Tasks.Task UpdateExpiredStatusesAsync()
     {
-        await App.ExerciseRepository.UpdateCompletedStatusesAsync();
+        await App.ExerciseRepository.UpdateExpiredStatusesAsync();
     }
+    
 
 }

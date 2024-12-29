@@ -8,10 +8,11 @@ public partial class App : Application
 {
     public static TaskRepository TaskRepository { get; private set; }
     public static ExerciseRepository ExerciseRepository { get; private set; }
+    public static TasksManager.Models.Buffer Buffer { get; private set; }
     // private Timer _notificationTimer;
     // public App() : this(Path.Combine(FileSystem.AppDataDirectory, "TasksManager.db")) { }
 
-    public App(TaskRepository taskRepository, ExerciseRepository exerciseRepository)
+    public App(TaskRepository taskRepository, ExerciseRepository exerciseRepository, TasksManager.Models.Buffer buffer)
     {
         // InitializeComponent();
         // TaskRepository = new TaskRepository(dbPath);
@@ -19,6 +20,7 @@ public partial class App : Application
         InitializeComponent();
         TaskRepository = taskRepository;
         ExerciseRepository = exerciseRepository;
+        Buffer = buffer;
         MainPage = new AppShell();
         // _notificationTimer = new Timer(async _ =>
         // {

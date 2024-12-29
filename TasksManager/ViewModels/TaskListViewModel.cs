@@ -60,11 +60,25 @@ public partial class TaskListViewModel : ObservableObject
     
     private void StartOverdueStatusUpdater()
     {
-        _overdueUpdateTimer = new Timer(async _ =>
+        ScheduleDailyUpdate(async () =>
         {
             await _taskService.UpdateOverdueStatusesAsync();
             await LoadTasksAsync();
-        }, null, TimeSpan.Zero, TimeSpan.FromMinutes(1));
+        });
+    }
+    
+    private void ScheduleDailyUpdate(Action action)
+    {
+        var now = DateTime.Now;
+        var midnight = now.Date.AddDays(1);
+        var timeUntilMidnight = midnight - now;
+        Timer timer = null;
+        timer = new Timer(_ =>
+        {
+            action.Invoke();
+            timer?.Dispose();
+            ScheduleDailyUpdate(action);
+        }, null, timeUntilMidnight, Timeout.InfiniteTimeSpan);
     }
     partial void OnSelectedSortOptionChanged(string value)
     {

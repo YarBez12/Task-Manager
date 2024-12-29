@@ -67,6 +67,10 @@
                        Command="{Binding CancelCommand}"
                        BackgroundColor="Red"
                        TextColor="White" />
+               <Button Text="📥"
+                       x:Name="PasteButton"
+                       Command="{Binding PasteExerciseCommand}"
+                       CommandParameter="{Binding .}"/>
         </HorizontalStackLayout>
     </Grid>
 </ContentView>

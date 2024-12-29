@@ -28,6 +28,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<TaskRepository>(s => ActivatorUtilities.CreateInstance<TaskRepository>(s,dbTaskPath));
         string dbExercisePath = Path.Combine(FileSystem.AppDataDirectory, "ExerciseManager.db3");
         builder.Services.AddSingleton<ExerciseRepository>(s => ActivatorUtilities.CreateInstance<ExerciseRepository>(s,dbExercisePath));
+        builder.Services.AddSingleton<TasksManager.Models.Buffer>(s => ActivatorUtilities.CreateInstance<TasksManager.Models.Buffer>(s));
 
 #if DEBUG
         builder.Logging.AddDebug();

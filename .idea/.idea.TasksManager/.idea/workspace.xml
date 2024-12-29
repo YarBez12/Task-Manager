@@ -15,27 +15,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a65352d-53d6-4e80-8678-24a4b80360b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TasksManager/Models/Exercise.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Models/ExerciseRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Models/ExerciseValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Services/DateTimeExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Services/ExerciseService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/ViewModels/DayScheduleViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/ViewModels/ExerciseViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Views/SchedulePage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Views/SchedulePage.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TasksManager/Models/Buffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TasksManager/Services/BufferService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TasksManager/Views/EditExercisePage.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TasksManager/Views/EditExercisePage.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TasksManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TasksManager/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/AppShell.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/AppShell.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/MauiProgram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/MauiProgram.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/Services/TaskNotificationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Services/TaskNotificationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Models/Exercise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Models/Exercise.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Models/ExerciseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Models/ExerciseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Services/ExerciseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Services/ExerciseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/DayScheduleViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/DayScheduleViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/ExerciseViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/ExerciseViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/TaskListViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/TaskListViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/TaskViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/TaskViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Views/SchedulePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/SchedulePage.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.xml" afterDir="false" />
@@ -134,12 +134,10 @@
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/172/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/172/jl/res.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/175/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/175/jl/res.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/177/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/177/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksMan.6C093635.Up2Date" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.sourcelink.json" afterDir="false" />
@@ -153,12 +151,10 @@
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.s" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/ref/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/ref/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/refint/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/refint/TasksManager.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksMan.6C093635.Up2Date" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.sourcelink.json" afterDir="false" />
@@ -188,7 +184,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61fe11e9d86b4d2a9bd2b806929b7d381a400/99/064fa1e1/SQLiteAsyncConnection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///var/folders/hm/zl9yqqpj1v10khgpcdwyt_kh0000gn/T/SourceGeneratedDocuments/451E599E3342F37884184F05/CommunityToolkit.Mvvm.SourceGenerators/CommunityToolkit.Mvvm.SourceGenerators.ObservablePropertyGenerator/TasksManager.ViewModels.ScheduleViewModel.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e68dd16c3803d340349770df42fa64b73e049/App.xaml.sg.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
@@ -260,7 +256,9 @@
       <workItem from="1734775325754" duration="18739000" />
       <workItem from="1734801443199" duration="12440000" />
       <workItem from="1734819386686" duration="19057000" />
-      <workItem from="1734880008098" duration="22373000" />
+      <workItem from="1734880008098" duration="29700000" />
+      <workItem from="1735419399006" duration="6951000" />
+      <workItem from="1735466438006" duration="13404000" />
     </task>
     <servers />
   </component>
@@ -275,45 +273,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs</url>
-          <line>83</line>
-          <properties documentPath="$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs" containingFunctionPresentation="Method 'LoadWeekSchedule'">
-            <startOffsets>
-              <option value="2336" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2395" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs</url>
-          <line>84</line>
-          <properties documentPath="$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs" containingFunctionPresentation="Method 'LoadWeekSchedule'">
-            <startOffsets>
-              <option value="2404" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2425" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TasksManager/ViewModels/ExerciseViewModel.cs</url>
-          <line>116</line>
-          <properties documentPath="$PROJECT_DIR$/TasksManager/ViewModels/ExerciseViewModel.cs" containingFunctionPresentation="Method 'Save'">
-            <startOffsets>
-              <option value="3102" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3321" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs</url>
           <line>21</line>
           <properties documentPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs" containingFunctionPresentation="Property 'Date'">
@@ -327,17 +286,17 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TasksManager/ViewModels/DayScheduleViewModel.cs</url>
-          <line>18</line>
-          <properties documentPath="$PROJECT_DIR$/TasksManager/ViewModels/DayScheduleViewModel.cs" containingFunctionPresentation="Method 'AddExercise'">
+          <url>file://$PROJECT_DIR$/TasksManager/Models/Buffer.cs</url>
+          <line>12</line>
+          <properties documentPath="$PROJECT_DIR$/TasksManager/Models/Buffer.cs" containingFunctionPresentation="Method 'Copy'">
             <startOffsets>
-              <option value="507" />
+              <option value="209" />
             </startOffsets>
             <endOffsets>
-              <option value="596" />
+              <option value="224" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

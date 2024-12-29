@@ -7,9 +7,17 @@
         <member name="T:TasksManager.ViewModels.DayScheduleViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:TasksManager.ViewModels.DayScheduleViewModel.Date">
             <inheritdoc cref="F:TasksManager.ViewModels.DayScheduleViewModel.date"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.IsNotPast">
+            <inheritdoc cref="F:TasksManager.ViewModels.DayScheduleViewModel.isNotPast"/>
         </member>
         <member name="P:TasksManager.ViewModels.DayScheduleViewModel.Exercises">
             <inheritdoc cref="F:TasksManager.ViewModels.DayScheduleViewModel.exercises"/>
@@ -20,10 +28,45 @@
         <member name="P:TasksManager.ViewModels.DayScheduleViewModel.AddExerciseCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.DayScheduleViewModel.AddExercise(System.DateTime)"/>.</summary>
         </member>
+        <member name="F:TasksManager.ViewModels.DayScheduleViewModel.editExerciseCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.DayScheduleViewModel.EditExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.EditExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.DayScheduleViewModel.EditExercise(TasksManager.ViewModels.ExerciseViewModel)"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.DayScheduleViewModel.deleteExerciseCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.DayScheduleViewModel.DeleteExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.DeleteExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.DayScheduleViewModel.DeleteExercise(TasksManager.ViewModels.ExerciseViewModel)"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.DayScheduleViewModel.moveUpCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.DayScheduleViewModel.MoveUpCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.MoveUpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.DayScheduleViewModel.MoveUp(TasksManager.ViewModels.ExerciseViewModel)"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.DayScheduleViewModel.moveDownCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.DayScheduleViewModel.MoveDownCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.MoveDownCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.DayScheduleViewModel.MoveDown(TasksManager.ViewModels.ExerciseViewModel)"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.DayScheduleViewModel.toggleExerciseCompletedStatusCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.DayScheduleViewModel.ToggleExerciseCompletedStatusCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.DayScheduleViewModel.ToggleExerciseCompletedStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.DayScheduleViewModel.ToggleExerciseCompletedStatus(TasksManager.ViewModels.ExerciseViewModel)"/>.</summary>
+        </member>
         <member name="T:TasksManager.ViewModels.ExerciseViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.BgColor">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.bgColor"/>
         </member>
         <member name="P:TasksManager.ViewModels.ExerciseViewModel.SelectedHour">
             <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.selectedHour"/>
@@ -55,6 +98,15 @@
         <member name="P:TasksManager.ViewModels.ExerciseViewModel.IsLast">
             <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.isLast"/>
         </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.TaskId">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.taskId"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.UpdateButtonText">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.updateButtonText"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.IsNotCompleted">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.isNotCompleted"/>
+        </member>
         <member name="P:TasksManager.ViewModels.ExerciseViewModel.Tasks">
             <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.tasks"/>
         </member>
@@ -71,6 +123,16 @@
             <param name="value">The new property value that was set.</param>
             <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.ExerciseViewModel.SelectedMinute"/> is changed.</remarks>
         </member>
+        <member name="M:TasksManager.ViewModels.ExerciseViewModel.OnIsCompletedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.ExerciseViewModel.IsCompleted"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.ExerciseViewModel.IsCompleted"/> is changed.</remarks>
+        </member>
+        <member name="M:TasksManager.ViewModels.ExerciseViewModel.OnTaskIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.ExerciseViewModel.TaskId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.ExerciseViewModel.TaskId"/> is changed.</remarks>
+        </member>
         <member name="F:TasksManager.ViewModels.ExerciseViewModel.saveCommand">
             <summary>The backing field for <see cref="P:TasksManager.ViewModels.ExerciseViewModel.SaveCommand"/>.</summary>
         </member>
@@ -82,6 +144,18 @@
         </member>
         <member name="P:TasksManager.ViewModels.ExerciseViewModel.CancelCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.ExerciseViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.ExerciseViewModel.copyExerciseCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.ExerciseViewModel.CopyExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.CopyExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.ExerciseViewModel.CopyExercise"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.ExerciseViewModel.pasteExerciseCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.ExerciseViewModel.PasteExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.PasteExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.ExerciseViewModel.PasteExercise"/>.</summary>
         </member>
         <member name="T:TasksManager.ViewModels.ScheduleViewModel">
             <inheritdoc/>
@@ -401,8 +475,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Date">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Date" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsNotPast">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsNotPast" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Exercises">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Exercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BgColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BgColor" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedHour">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedHour" generated properties.</summary>
@@ -430,6 +510,15 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLast">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLast" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TaskId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TaskId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UpdateButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UpdateButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsNotCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsNotCompleted" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Tasks">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Tasks" generated properties.</summary>
@@ -500,8 +589,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Date">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Date" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotPast">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotPast" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Exercises">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Exercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BgColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BgColor" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedHour">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedHour" generated properties.</summary>
@@ -529,6 +624,15 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLast">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLast" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TaskId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TaskId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UpdateButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UpdateButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotCompleted" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Tasks">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Tasks" generated properties.</summary>

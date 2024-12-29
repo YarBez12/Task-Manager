@@ -11,5 +11,6 @@ public partial class ExerciseControl : ContentView
     public ExerciseControl()
     {
         InitializeComponent();
+        PasteButton.IsVisible = App.Buffer.HasCopy();
     }
 }

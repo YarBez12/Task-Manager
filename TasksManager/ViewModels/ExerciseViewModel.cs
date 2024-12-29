@@ -9,10 +9,15 @@ namespace TasksManager.ViewModels;
 [QueryProperty(nameof(Date), "SelectedDate")]
 public partial class ExerciseViewModel : ObservableObject
 {
+    private ExerciseViewModel? _copiedExercise;
     public ObservableCollection<int> Hours { get; } = new ObservableCollection<int>(Enumerable.Range(0, 24));
     public ObservableCollection<int> Minutes { get; } = new ObservableCollection<int>(Enumerable.Range(0, 60));
     private readonly ExerciseService _exerciseService;
     private readonly TaskService _taskService;
+    private BufferService _bufferService = new BufferService();
+
+    [ObservableProperty] 
+    private Color bgColor;
     
     [ObservableProperty]
     private int selectedHour;
@@ -36,6 +41,13 @@ public partial class ExerciseViewModel : ObservableObject
     private void UpdateDuration()
     {
         Duration = new TimeSpan(SelectedHour, SelectedMinute, 0);
+        Console.WriteLine();
+    }
+
+    private void UpdateDurationView()
+    {
+        SelectedHour = Duration.Hours;
+        SelectedMinute = Duration.Minutes;
     }
 
     public int Id { get; internal set; }
@@ -49,6 +61,11 @@ public partial class ExerciseViewModel : ObservableObject
     [ObservableProperty]
     private TimeSpan duration;
 
+    // partial void OnDurationChanged(TimeSpan value)
+    // {
+    //     UpdateDurationView();
+    // }
+
     [ObservableProperty]
     private bool isCompleted;
 
@@ -61,7 +78,45 @@ public partial class ExerciseViewModel : ObservableObject
     [ObservableProperty] 
     private bool isLast;
 
-    public int TaskId { get; set; } 
+    [ObservableProperty] 
+    private int taskId;
+
+    [ObservableProperty] 
+    private string updateButtonText = "\u2714\ufe0f";
+
+    [ObservableProperty] 
+    private bool isNotCompleted;
+
+    partial void OnIsCompletedChanged(bool value)
+    {
+        if (value)
+        {
+            IsNotCompleted = false;
+            UpdateButtonText = "↩️";
+            BgColor = Color.FromArgb("#9ACD32");
+        }
+        else if (IsExpired)
+        {
+            IsNotCompleted = true;
+            UpdateButtonText = "\u2714\ufe0f";
+            BgColor = Color.FromArgb("#FFB6C1");
+        }
+        else
+        {
+            IsNotCompleted = true;
+            UpdateButtonText = "\u2714\ufe0f";
+            BgColor = Color.FromArgb("#FFA500");
+        }
+    }
+
+    partial void OnTaskIdChanged(int value)
+    {
+        if (Tasks != null)
+        {
+            SelectedTask = Tasks.FirstOrDefault(t => t.Id == TaskId);
+            TaskName = SelectedTask?.Title ?? string.Empty;
+        }
+    }
     
     [ObservableProperty]
     private ObservableCollection<TasksManager.Models.Task> tasks;
@@ -76,9 +131,13 @@ public partial class ExerciseViewModel : ObservableObject
         Id = exercise.Id;
         Essence = exercise.Essence;
         Date = exercise.Date;
-        Duration = exercise.Duration;
-        IsCompleted = exercise.IsCompleted;
+        SelectedMinute = exercise.Duration.Minutes;
+        SelectedHour = exercise.Duration.Hours;
+        // Duration = exercise.Duration;
+        // SelectedMinute = exercise.Duration.Minutes;
+        // SelectedHour = exercise.Duration.Hours;
         IsExpired = exercise.IsExpired;
+        IsCompleted = exercise.IsCompleted;
         Priority = exercise.Priority;
         TaskId = exercise.TaskId;
         IsLast = exercise.IsLast;
@@ -88,12 +147,12 @@ public partial class ExerciseViewModel : ObservableObject
     private async void LoadTasksAsync()
     {
         var taskList = await _taskService.GetTasksAsync();
+        Tasks = new ObservableCollection<TasksManager.Models.Task>(taskList.Where(t => !t.IsCompleted));
         if (TaskId != 0)
         {
-            SelectedTask = await _taskService.GetTaskByIdAsync(TaskId);
-            TaskName = SelectedTask.Title;
+            SelectedTask = taskList.FirstOrDefault(t => t.Id == TaskId);
+            TaskName = SelectedTask?.Title ?? string.Empty;
         }
-        Tasks = new ObservableCollection<TasksManager.Models.Task>(taskList.Where(t => !t.IsCompleted));
     }
 
 
@@ -102,7 +161,7 @@ public partial class ExerciseViewModel : ObservableObject
         _taskService = new TaskService();
         _exerciseService = new ExerciseService();
         Date = DateTime.Now.Date;
-        Duration = TimeSpan.FromHours(1);
+        SelectedHour = 1;
         LoadTasksAsync();
     }
 
@@ -114,17 +173,35 @@ public partial class ExerciseViewModel : ObservableObject
     [RelayCommand]
     private async System.Threading.Tasks.Task Save()
     {
-        var newExercise = new Exercise
+        if (Id <= 0)
         {
-            Essence = Essence,
-            Date = Date,
-            Duration = Duration,
-            TaskId = SelectedTask.Id,
-            IsLast = IsLast
-            
-        };
+            var newExercise = new Exercise
+            {
+                Essence = Essence,
+                Date = Date,
+                Duration = Duration,
+                TaskId = SelectedTask.Id,
+                IsLast = IsLast
 
-        Id = await _exerciseService.AddExerciseAsync(newExercise);
+            };
+
+            await _exerciseService.AddExerciseAsync(newExercise);
+            // Id = await _exerciseService.AddExerciseAsync(newExercise);
+            Id = newExercise.Id;
+        }
+        else
+        {
+            var existingExercise = await App.ExerciseRepository.GetExerciseByIdAsync(Id);
+            if (existingExercise != null)
+            {
+                existingExercise.Essence = Essence;
+                existingExercise.Duration = Duration;
+                existingExercise.TaskId = SelectedTask.Id;
+                existingExercise.IsLast = IsLast;
+                
+                await _exerciseService.UpdateExerciseAsync(existingExercise);
+            }
+        }
         await Shell.Current.GoToAsync("..");
     }
 
@@ -132,5 +209,27 @@ public partial class ExerciseViewModel : ObservableObject
     private void Cancel()
     {
         Shell.Current.GoToAsync("..");
+    }
+
+    [RelayCommand]
+    private void CopyExercise()
+    {
+        _bufferService.Copy<ExerciseViewModel>(this);
+    }
+    [RelayCommand]
+    public void PasteExercise()
+    {
+        var copiedExercise = _bufferService.Paste<ExerciseViewModel>();
+        if (copiedExercise != null)
+        {
+            Essence = copiedExercise.Essence;
+            SelectedMinute = copiedExercise.Duration.Minutes;
+            SelectedHour = copiedExercise.Duration.Hours;
+            // Duration = copiedExercise.Duration;
+            // SelectedMinute = Duration.Minutes;
+            // SelectedHour = Duration.Hours;
+            TaskId = copiedExercise.TaskId;
+            IsLast = copiedExercise.IsLast;
+        }
     }
 }

@@ -31,7 +31,7 @@ public class Exercise
         return $"{Essence} (Time: {Date:d}, Duration: {Duration})";
     }
     
-    public void UpdateCompletedStatus()
+    public void UpdateExpiredStatus()
     {
         if (IsCompleted) return;
         var now = DateTime.Now.Date;

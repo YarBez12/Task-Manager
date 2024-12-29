@@ -108,7 +108,9 @@ public partial class TaskViewModel : ObservableObject
                 IsCompleted = IsCompleted
             };
 
-            Id = await _taskService.AddTaskAsync(newTask);
+            // Id = await _taskService.AddTaskAsync(newTask);
+            await _taskService.AddTaskAsync(newTask);
+            Id = newTask.Id;
             // var tt = await App.TaskRepository.GetTasksAsync();
             // foreach (var t in tt)
             // {

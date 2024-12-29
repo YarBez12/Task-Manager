@@ -35,8 +35,14 @@ public class ExerciseRepository
     public async System.Threading.Tasks.Task<int> AddExerciseAsync(TasksManager.Models.Exercise exercise)
     {
         await InitAsync();
-        var result = await conn.InsertAsync(exercise);
-        return result;
+        var exercisesOnSameDate = await conn.Table<Exercise>().Where(e => e.Date == exercise.Date).ToListAsync();
+        foreach (var existingExercise in exercisesOnSameDate)
+        {
+            existingExercise.Priority += 1;
+            await conn.UpdateAsync(existingExercise);
+        }
+        exercise.Priority = 1;
+        return await conn.InsertAsync(exercise);
     }
     
     public async System.Threading.Tasks.Task<int> UpdateExerciseAsync(TasksManager.Models.Exercise exercise)
@@ -58,12 +64,12 @@ public class ExerciseRepository
         return await conn.Table<TasksManager.Models.Exercise>().DeleteAsync(t => t.IsCompleted);
     }
     
-    public async System.Threading.Tasks.Task UpdateCompletedStatusesAsync()
+    public async System.Threading.Tasks.Task UpdateExpiredStatusesAsync()
     {
         var exercises = await GetExercisesAsync();
         foreach (var ex in exercises.Where(t => !t.IsCompleted))
         {
-            ex.UpdateCompletedStatus();
+            ex.UpdateExpiredStatus();
             await UpdateExerciseAsync(ex);
         }
     }

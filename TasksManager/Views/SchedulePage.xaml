@@ -42,22 +42,64 @@
                                     Command="{Binding AddExerciseCommand}"
                                     CommandParameter="{Binding Date}"
                                     HorizontalOptions="End"
+                                    IsVisible="{Binding IsNotPast}"
                                     Grid.Column="1"/>
                         </Grid>
 
-                        <CollectionView ItemsSource="{Binding Exercises}">
+                        <!-- <CollectionView ItemsSource="{Binding Exercises}" -->
+                        <!--                 > -->
+                        <CollectionView ItemsSource="{Binding Exercises}"
+                                        >
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Frame Margin="5">
-                                        <VerticalStackLayout>
-                                            <Label Text="{Binding Essence}" 
-                                                   FontSize="16" />
-                                            <Label Text="{Binding Duration, StringFormat='Duration: {0:hh\\:mm}'}" 
-                                                   FontSize="14" />
-                                            <Label Text="{Binding TaskName}" 
-                                                   FontSize="12" />
-                                        </VerticalStackLayout>
+                                    <Frame Margin="5" BackgroundColor="{Binding BgColor}">
+                                        <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
+                                              RowDefinitions="Auto, Auto"
+                                              ColumnSpacing="10"
+                                              RowSpacing="10">
+                                            <VerticalStackLayout Grid.Row="0" Grid.ColumnSpan="6">
+                                                <Label Text="{Binding Essence}"
+                                                       FontSize="16" />
+                                                <Label Text="{Binding Duration, StringFormat='Duration: {0:hh\\:mm}'}"
+                                                       FontSize="14" />
+                                                <Label Text="{Binding TaskName}"
+                                                       FontSize="12" />
+                                            </VerticalStackLayout>
+                                            <Button Text="✏️"
+                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:DayScheduleViewModel}}, Path=EditExerciseCommand}"
+                                                    CommandParameter="{Binding .}"
+                                                    Grid.Row="1"
+                                                    Grid.Column="0"/>
+                                            <Button Text="🗑️"
+                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:DayScheduleViewModel}}, Path=DeleteExerciseCommand}"
+                                                    CommandParameter="{Binding .}"
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"/>
+                                            <Button Text="⬆️" 
+                                                    Command="{Binding Source = {RelativeSource AncestorType={x:Type vm:DayScheduleViewModel}}, Path = MoveUpCommand}" 
+                                                    CommandParameter="{Binding .}"
+                                                    Grid.Row="1"
+                                                    Grid.Column="2"
+                                                    IsEnabled="{Binding IsNotCompleted}"/>
+                                            <Button Text="⬇️" 
+                                                    Command="{Binding Source = {RelativeSource AncestorType={x:Type vm:DayScheduleViewModel}}, Path =MoveDownCommand}" 
+                                                    CommandParameter="{Binding .}" 
+                                                    Grid.Row="1"
+                                                    Grid.Column="3"
+                                                    IsEnabled="{Binding IsNotCompleted}"/>
+                                            <Button Text="📋"
+                                                    Command="{Binding CopyExerciseCommand}"
+                                                    CommandParameter="{Binding .}"
+                                                    Grid.Column="4"
+                                                    Grid.Row="1"/>
+                                            <Button Text="{Binding UpdateButtonText }"
+                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:DayScheduleViewModel}}, Path = ToggleExerciseCompletedStatusCommand}"
+                                                    CommandParameter="{Binding .}"
+                                                    Grid.Column="5"
+                                                    Grid.Row="1"/>
+                                        </Grid>
                                     </Frame>
+                                    
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
@@ -67,3 +109,4 @@
         </CollectionView>
     </Grid>
 </ContentPage>
+
