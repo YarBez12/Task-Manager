@@ -3,6 +3,8 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using TasksManager.Models;
 using TasksManager.Services;
+using TasksManager.Views;
+
 // using Task = TasksManager.Models.Task;
 
 namespace TasksManager.ViewModels;
@@ -27,10 +29,23 @@ public partial class TaskViewModel : ObservableObject
     [ObservableProperty]
     private bool isCompleted;
     [ObservableProperty]
+    private string isCompletedText;
+    [ObservableProperty]
+    private Color isCompletedColor;
+    
+    [ObservableProperty]
     private TaskCategory category;
     
     [ObservableProperty]
     private TaskOverdueStatus overdueStatus;
+    
+    [ObservableProperty]
+    private string completeText;
+    
+    private ExerciseService _exerciseService;
+    
+    [ObservableProperty]
+    private ObservableCollection<Exercise> exercises;
 
     // public bool IsOverdue => !IsCompleted && DateTime.Now > DueDate;
 
@@ -45,8 +60,15 @@ public partial class TaskViewModel : ObservableObject
     //     IsCompleted = false;
     // }
 
+    private async void LoadExercises()
+    {
+        var allExercises = await _exerciseService.GetExercisesAsync();
+        Exercises = new ObservableCollection<Exercise>(allExercises.Where(e => e.TaskId == Id));
+    }
+
     public TaskViewModel(TasksManager.Models.Task task, TaskService taskService = null)
     {
+        _exerciseService = new ExerciseService();
         _taskService = taskService ?? new TaskService();
         Id = task.Id;
         title = task.Title;
@@ -56,22 +78,45 @@ public partial class TaskViewModel : ObservableObject
         category = task.Category;
         overdueStatus = task.OverdueStatus;
         isCompleted = task.IsCompleted;
+        if (IsCompleted)
+        {
+            IsCompletedColor = Color.FromRgb(152, 251, 152);
+            isCompletedText = "Completed";
+            CompleteText = "Unfinish";
+        }
+        else
+        {
+            IsCompletedColor = Color.FromRgb(255, 192, 203);
+            isCompletedText = "Not Completed";
+            CompleteText = "Complete";
+        }
+        UpdateTimeRemaining();
+        StartOverdueStatusUpdater();
+        LoadExercises();
     }
     public TaskViewModel(TaskService taskService = null)
     {
+        _exerciseService = new ExerciseService();
         _taskService = taskService ?? new TaskService();
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
         overdueStatus = TaskOverdueStatus.Upcoming;
         Category = TaskCategory.Work;
+        UpdateTimeRemaining();
+        StartOverdueStatusUpdater();
+        LoadExercises();
     }
     public TaskViewModel()
     {
+        _exerciseService = new ExerciseService();
         _taskService = new TaskService();
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
         overdueStatus = TaskOverdueStatus.Upcoming;
         Category = TaskCategory.Work;
+        UpdateTimeRemaining();
+        StartOverdueStatusUpdater();
+        LoadExercises();
     }
     
     public ObservableCollection<TaskPriority> Priorities { get; } =
@@ -158,6 +203,91 @@ public partial class TaskViewModel : ObservableObject
         };
     }
 
+    partial void OnIsCompletedChanged(bool value)
+    {
+        if (value)
+        {
+            IsCompletedColor = Color.FromRgb(152, 251, 152);
+            IsCompletedText = "Completed";
+            CompleteText = "Unfinish";
+        }
+        else
+        {
+            IsCompletedColor = Color.FromRgb(255, 192, 203);
+            IsCompletedText = "Not Completed";
+            CompleteText = "Complete";
+        }
+    }
     
+    [ObservableProperty]
+    private string timeRemaining;
+
+    public TasksManager.Models.Task Task { get; }
     
+    private void ScheduleMinuteUpdate(Action action)
+    {
+        var now = DateTime.Now;
+        var nextMinute = now.AddMinutes(1).AddSeconds(-now.Second);
+        var timeUntilNextMinute = nextMinute - now;
+        Timer timer = null;
+        timer = new Timer(_ =>
+        {
+            action.Invoke();
+            timer?.Dispose();
+            ScheduleMinuteUpdate(action);
+        }, null, timeUntilNextMinute, Timeout.InfiniteTimeSpan);
+    }
+    
+    private void StartOverdueStatusUpdater()
+    {
+        ScheduleMinuteUpdate(async () =>
+        {
+            await _taskService.UpdateOverdueStatusesAsync();
+            UpdateTimeRemaining();
+        });
+    }
+    
+    private void UpdateTimeRemaining()
+    {
+        if (DueDate < DateTime.Now)
+        {
+            TimeRemaining = "Task is overdue.";
+        }
+        else
+        {
+            var timeLeft = DueDate - DateTime.Now;
+            TimeRemaining = $"{timeLeft.Days}d {timeLeft.Hours}h {timeLeft.Minutes}m remaining";
+        }
+    }
+    
+    [RelayCommand]
+    private async void ToggleCompleteTask()
+    {
+        if (!IsCompleted)
+        {
+            IsCompleted = true;
+        }
+        else
+        {
+            IsCompleted = false;
+        }
+        var existingTask = await _taskService.GetTaskByIdAsync(Id);
+        if (existingTask != null)
+        {
+            existingTask.IsCompleted = IsCompleted;
+            await _taskService.UpdateTaskAsync(existingTask);
+        }
+    }
+    
+    [RelayCommand]
+    public async System.Threading.Tasks.Task NavigateToEditTask()
+    {
+        await Shell.Current.GoToAsync($"{nameof(EditTaskPage)}?Id={Id}");
+    }
+
+    [RelayCommand]
+    public async void AddExercise()
+    {
+        await Shell.Current.GoToAsync($"{nameof(AddExercisePage)}?TaskId={Id}");
+    }
 }

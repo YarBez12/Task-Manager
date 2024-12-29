@@ -17,6 +17,12 @@ public partial class ExerciseViewModel : ObservableObject
     private BufferService _bufferService = new BufferService();
 
     [ObservableProperty] 
+    private bool isTaskFieldEnabled = true;
+
+    [ObservableProperty] 
+    private bool isDateNotSet = false;
+
+    [ObservableProperty] 
     private Color bgColor;
     
     [ObservableProperty]

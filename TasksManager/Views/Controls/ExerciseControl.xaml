@@ -5,7 +5,7 @@
              x:Class="TasksManager.Views.Controls.ExerciseControl">
     <Grid
         ColumnSpacing="20"
-        RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
         ColumnDefinitions="Auto, *">
         <Label Text = "Essence"
                Grid.Row="0"
@@ -48,7 +48,8 @@
                 ItemDisplayBinding="{Binding Title}" 
                 Grid.Row="2"
                 Grid.Column="1"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center"
+                IsEnabled="{Binding IsTaskFieldEnabled}"/>
         <Switch IsToggled="{Binding IsLast}"
                 Grid.Row="3"
                 Grid.Column="1"
@@ -58,7 +59,18 @@
                Grid.Column="0"
                VerticalOptions="Center"
                HorizontalOptions="End"/>
-        <HorizontalStackLayout Grid.Row="4" Grid.ColumnSpan="2" Spacing="30" HorizontalOptions="Center">
+        <Label Text = "Date"
+               Grid.Row="4"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="End"
+               IsVisible="{Binding IsDateNotSet}"/>
+        <DatePicker Date = "{Binding Date}"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    IsVisible="{Binding IsDateNotSet}"/>
+        <HorizontalStackLayout Grid.Row="5" Grid.ColumnSpan="2" Spacing="30" HorizontalOptions="Center">
                <Button Text="Save"
                        Command="{Binding SaveCommand}"
                        BackgroundColor="Green"

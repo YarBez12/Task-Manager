@@ -15,43 +15,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a65352d-53d6-4e80-8678-24a4b80360b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TasksManager/Models/Buffer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Services/BufferService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Views/EditExercisePage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TasksManager/Views/EditExercisePage.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TasksManager/Converters/BoolToTextConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TasksManager/Views/TaskDetailPage.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TasksManager/Views/TaskDetailPage.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TasksManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TasksManager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/App.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/AppShell.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/MauiProgram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/MauiProgram.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/Models/Exercise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Models/Exercise.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/Models/ExerciseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Models/ExerciseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/Services/ExerciseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Services/ExerciseService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/DayScheduleViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/DayScheduleViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/ExerciseViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/ExerciseViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/ScheduleViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/TaskListViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/TaskListViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/ViewModels/TaskViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/ViewModels/TaskViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/Controls/ExerciseControl.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/Views/SchedulePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/SchedulePage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Views/CurrentTasksPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/CurrentTasksPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/Views/CurrentTasksPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/Views/CurrentTasksPage.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/TasksManager.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/com.companyname.tasksmanager-Signed.apk" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/com.companyname.tasksmanager-Signed.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/com.companyname.tasksmanager-Signed.apk.idsig" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/com.companyname.tasksmanager-Signed.apk.idsig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/com.companyname.tasksmanager.apk" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-android/com.companyname.tasksmanager.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/TasksManager" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/TasksManager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/TasksManager.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/aot-instances.aotdata.arm64" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/aot-instances.aotdata.arm64" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/MacOS/TasksManager" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/MacOS/TasksManager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/MonoBundle/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/MonoBundle/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/MonoBundle/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/MonoBundle/TasksManager.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/MonoBundle/aot-instances.aotdata.arm64" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/MonoBundle/aot-instances.aotdata.arm64" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.app/Contents/_CodeSignature/CodeResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.pdb" afterDir="false" />
@@ -59,117 +48,417 @@
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/TasksManager.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/_Microsoft.Android.Resource.Designer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/_Microsoft.Android.Resource.Designer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/Java.Interop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/Java.Interop.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/Mono.Android.Export.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/Mono.Android.Export.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/Mono.Android.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/Mono.Android.Runtime.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/Mono.Android.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/Mono.Android.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/TasksManager.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/_Microsoft.Android.Resource.Designer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/assets/_Microsoft.Android.Resource.Designer.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/bin/classes.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/bin/classes.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/bin/com.companyname.tasksmanager.apk" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/bin/com.companyname.tasksmanager.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/environment.arm64-v8a.ll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/environment.arm64-v8a.ll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/environment.arm64-v8a.o" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/android/environment.arm64-v8a.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/app_shared_libraries/arm64-v8a/libxamarin-app.so" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/app_shared_libraries/arm64-v8a/libxamarin-app.so" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/buildid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/buildid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/devices.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/devices.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/100/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/100/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/101/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/101/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/102/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/102/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/103/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/103/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/104/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/104/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/106/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/106/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/107/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/107/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/110/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/110/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/111/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/111/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/112/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/112/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/114/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/114/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/115/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/115/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/116/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/116/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/117/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/117/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/118/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/118/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/119/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/119/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/120/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/120/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/123/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/123/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/125/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/125/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/126/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/126/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/129/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/129/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/130/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/130/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/132/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/132/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/134/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/134/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/135/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/135/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/136/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/136/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/137/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/137/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/138/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/138/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/139/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/139/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/140/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/140/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/141/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/141/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/142/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/142/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/143/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/143/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/144/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/144/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/145/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/145/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/146/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/146/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/147/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/147/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/148/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/148/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/149/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/149/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/150/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/150/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/151/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/151/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/152/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/152/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/153/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/153/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/154/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/154/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/155/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/155/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/157/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/157/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/159/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/159/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/162/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/162/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/163/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/163/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/164/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/164/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/165/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/165/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/166/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/166/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/171/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/171/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/172/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/172/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/175/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/175/jl/res.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/177/jl/res.zip" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-android/lp/177/jl/res.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/TasksManager.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/linked/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/linked/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/linked/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/linked/TasksManager.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/TasksManager" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/TasksManager" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.o" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.s" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/aot-instances.aotdata" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/aot-instances.aotdata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.o" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.s" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/ref/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/ref/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/refint/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/refint/TasksManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/CommunityToolkit.Maui.Core.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/CommunityToolkit.Maui.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/CommunityToolkit.Mvvm.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/FluentValidation.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.CSharp.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.Configuration.Abstractions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.Configuration.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.DependencyInjection.Abstractions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.DependencyInjection.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.Logging.Abstractions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.Logging.Debug.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.Logging.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.Options.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Extensions.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Controls.Compatibility.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Controls.Xaml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Controls.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Essentials.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Graphics.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.VisualBasic.Core.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.VisualBasic.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Win32.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Win32.Registry.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.iOS.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Plugin.LocalNotification.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/SQLite-net.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/SQLitePCLRaw.batteries_v2.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/SQLitePCLRaw.core.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/SQLitePCLRaw.provider.sqlite3.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.AppContext.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Buffers.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Collections.Concurrent.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Collections.Immutable.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Collections.NonGeneric.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Collections.Specialized.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Collections.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ComponentModel.Annotations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ComponentModel.DataAnnotations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ComponentModel.EventBasedAsync.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ComponentModel.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ComponentModel.TypeConverter.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ComponentModel.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Configuration.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Console.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Core.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Data.Common.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Data.DataSetExtensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Data.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.Contracts.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.Debug.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.DiagnosticSource.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.FileVersionInfo.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.Process.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.StackTrace.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.TextWriterTraceListener.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.Tools.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.TraceSource.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Diagnostics.Tracing.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Drawing.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Drawing.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Dynamic.Runtime.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Formats.Asn1.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Formats.Tar.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Globalization.Calendars.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Globalization.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Globalization.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.Compression.Brotli.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.Compression.FileSystem.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.Compression.ZipFile.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.Compression.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.FileSystem.AccessControl.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.FileSystem.DriveInfo.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.FileSystem.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.FileSystem.Watcher.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.FileSystem.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.IsolatedStorage.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.MemoryMappedFiles.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.Pipes.AccessControl.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.Pipes.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.UnmanagedMemoryStream.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.IO.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Linq.Expressions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Linq.Parallel.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Linq.Queryable.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Linq.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Memory.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Http.Json.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Http.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.HttpListener.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Mail.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.NameResolution.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.NetworkInformation.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Ping.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Quic.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Requests.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Security.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.ServicePoint.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.Sockets.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.WebClient.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.WebHeaderCollection.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.WebProxy.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.WebSockets.Client.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.WebSockets.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Net.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Numerics.Vectors.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Numerics.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ObjectModel.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.DispatchProxy.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.Emit.ILGeneration.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.Emit.Lightweight.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.Emit.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.Metadata.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.TypeExtensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Reflection.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Resources.Reader.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Resources.ResourceManager.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Resources.Writer.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.CompilerServices.Unsafe.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.CompilerServices.VisualC.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Handles.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.InteropServices.JavaScript.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.InteropServices.RuntimeInformation.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.InteropServices.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Intrinsics.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Loader.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Numerics.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Serialization.Formatters.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Serialization.Json.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Serialization.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Serialization.Xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.Serialization.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Runtime.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.AccessControl.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Claims.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Cryptography.Algorithms.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Cryptography.Cng.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Cryptography.Csp.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Cryptography.Encoding.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Cryptography.OpenSsl.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Cryptography.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Cryptography.X509Certificates.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Cryptography.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Principal.Windows.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.Principal.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.SecureString.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Security.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ServiceModel.Web.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ServiceProcess.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Text.Encoding.CodePages.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Text.Encoding.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Text.Encoding.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Text.Encodings.Web.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Text.Json.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Text.RegularExpressions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.Channels.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.Overlapped.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.Tasks.Dataflow.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.Tasks.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.Tasks.Parallel.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.Tasks.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.Thread.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.ThreadPool.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.Timer.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Threading.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Transactions.Local.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Transactions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.ValueTuple.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Web.HttpUtility.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Web.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Windows.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.Linq.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.ReaderWriter.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.Serialization.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.XDocument.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.XPath.XDocument.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.XPath.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.XmlDocument.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.XmlSerializer.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.Xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/System.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/WindowsBase.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/mscorlib.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/netstandard.stamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/TasksManager.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/linked/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/linked/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/linked/TasksManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/linked/TasksManager.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/TasksManager" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/TasksManager" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.o" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.s" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/System.Private.CoreLib.dll.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.aotdata" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.aotdata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.o" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.s" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/nativelibraries/aot-output/arm64/aot-instances.dll.s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/ref/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/ref/TasksManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/refint/TasksManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/refint/TasksManager.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/CommunityToolkit.Maui.Core.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/CommunityToolkit.Maui.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/CommunityToolkit.Mvvm.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/FluentValidation.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.CSharp.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Configuration.Abstractions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Configuration.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.DependencyInjection.Abstractions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.DependencyInjection.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Logging.Abstractions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Logging.Debug.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Logging.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Options.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Extensions.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.MacCatalyst.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Controls.Compatibility.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Controls.Xaml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Controls.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Essentials.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.Graphics.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Maui.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.VisualBasic.Core.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.VisualBasic.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Win32.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Win32.Registry.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Plugin.LocalNotification.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/SQLite-net.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/SQLitePCLRaw.batteries_v2.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/SQLitePCLRaw.core.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/SQLitePCLRaw.provider.e_sqlite3.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.AppContext.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Buffers.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Collections.Concurrent.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Collections.Immutable.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Collections.NonGeneric.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Collections.Specialized.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Collections.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ComponentModel.Annotations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ComponentModel.DataAnnotations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ComponentModel.EventBasedAsync.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ComponentModel.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ComponentModel.TypeConverter.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ComponentModel.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Configuration.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Console.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Core.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Data.Common.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Data.DataSetExtensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Data.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.Contracts.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.Debug.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.DiagnosticSource.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.FileVersionInfo.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.Process.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.StackTrace.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.TextWriterTraceListener.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.Tools.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.TraceSource.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Diagnostics.Tracing.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Drawing.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Drawing.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Dynamic.Runtime.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Formats.Asn1.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Formats.Tar.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Globalization.Calendars.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Globalization.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Globalization.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.Compression.Brotli.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.Compression.FileSystem.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.Compression.ZipFile.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.Compression.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.FileSystem.AccessControl.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.FileSystem.DriveInfo.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.FileSystem.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.FileSystem.Watcher.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.FileSystem.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.IsolatedStorage.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.MemoryMappedFiles.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.Pipes.AccessControl.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.Pipes.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.UnmanagedMemoryStream.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.IO.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Linq.Expressions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Linq.Parallel.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Linq.Queryable.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Linq.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Memory.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Http.Json.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Http.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.HttpListener.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Mail.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.NameResolution.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.NetworkInformation.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Ping.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Quic.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Requests.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Security.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.ServicePoint.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.Sockets.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.WebClient.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.WebHeaderCollection.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.WebProxy.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.WebSockets.Client.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.WebSockets.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Net.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Numerics.Vectors.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Numerics.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ObjectModel.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.DispatchProxy.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.Emit.ILGeneration.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.Emit.Lightweight.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.Emit.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.Metadata.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.TypeExtensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Reflection.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Resources.Reader.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Resources.ResourceManager.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Resources.Writer.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.CompilerServices.Unsafe.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.CompilerServices.VisualC.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Handles.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.InteropServices.JavaScript.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.InteropServices.RuntimeInformation.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.InteropServices.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Intrinsics.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Loader.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Numerics.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Serialization.Formatters.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Serialization.Json.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Serialization.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Serialization.Xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.Serialization.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Runtime.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.AccessControl.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Claims.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Cryptography.Algorithms.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Cryptography.Cng.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Cryptography.Csp.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Cryptography.Encoding.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Cryptography.OpenSsl.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Cryptography.Primitives.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Cryptography.X509Certificates.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Cryptography.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Principal.Windows.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.Principal.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.SecureString.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Security.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ServiceModel.Web.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ServiceProcess.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Text.Encoding.CodePages.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Text.Encoding.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Text.Encoding.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Text.Encodings.Web.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Text.Json.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Text.RegularExpressions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.Channels.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.Overlapped.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.Tasks.Dataflow.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.Tasks.Extensions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.Tasks.Parallel.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.Tasks.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.Thread.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.ThreadPool.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.Timer.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Threading.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Transactions.Local.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Transactions.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.ValueTuple.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Web.HttpUtility.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Web.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Windows.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.Linq.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.ReaderWriter.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.Serialization.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.XDocument.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.XPath.XDocument.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.XPath.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.XmlDocument.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.XmlSerializer.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.Xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/System.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/WindowsBase.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/mscorlib.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/netstandard.stamp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +480,10 @@
       <facet id="TasksManager/invalid/Android Facet - TasksManager" />
     </ignored-facets>
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -258,7 +551,7 @@
       <workItem from="1734819386686" duration="19057000" />
       <workItem from="1734880008098" duration="29700000" />
       <workItem from="1735419399006" duration="6951000" />
-      <workItem from="1735466438006" duration="13404000" />
+      <workItem from="1735466438006" duration="20864000" />
     </task>
     <servers />
   </component>
@@ -274,13 +567,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs</url>
-          <line>21</line>
+          <line>26</line>
           <properties documentPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs" containingFunctionPresentation="Property 'Date'">
             <startOffsets>
-              <option value="414" />
+              <option value="577" />
             </startOffsets>
             <endOffsets>
-              <option value="528" />
+              <option value="694" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
@@ -297,6 +590,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs</url>
+          <line>51</line>
+          <properties documentPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs" containingFunctionPresentation="Property 'TaskId'">
+            <startOffsets>
+              <option value="1358" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1416" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs</url>
+          <line>52</line>
+          <properties documentPath="$PROJECT_DIR$/TasksManager/Views/AddExercisePage.xaml.cs" containingFunctionPresentation="Property 'TaskId'">
+            <startOffsets>
+              <option value="1436" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1499" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

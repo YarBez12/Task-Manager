@@ -55,7 +55,12 @@
                           SeparatorColor="Gray"
                           SelectedItem="{Binding SelectedTask, Mode=TwoWay}"
                           Grid.Row="1"
+                          ItemTapped="ListView_OnItemTapped"
                           >
+                    <!-- <ListView.GestureRecognizers> -->
+                    <!--     <TapGestureRecognizer Command="{Binding NavigateToDetailPageCommand}" -->
+                    <!--                           CommandParameter="{Binding .}"/> -->
+                    <!-- </ListView.GestureRecognizers> -->
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text = "{Binding Title}" 

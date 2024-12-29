@@ -267,7 +267,14 @@ public partial class TaskListViewModel : ObservableObject
         }
     }
     
-    
+    [RelayCommand]
+    public async System.Threading.Tasks.Task NavigateToDetailPage(TaskViewModel task)
+    {
+        if (task != null)
+        {
+            await Shell.Current.GoToAsync($"{nameof(TaskDetailPage)}?Id={task.Id}");
+        }
+    }
     
     
 

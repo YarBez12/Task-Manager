@@ -65,6 +65,12 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.IsTaskFieldEnabled">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.isTaskFieldEnabled"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.ExerciseViewModel.IsDateNotSet">
+            <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.isDateNotSet"/>
+        </member>
         <member name="P:TasksManager.ViewModels.ExerciseViewModel.BgColor">
             <inheritdoc cref="F:TasksManager.ViewModels.ExerciseViewModel.bgColor"/>
         </member>
@@ -225,6 +231,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:TasksManager.ViewModels.TaskListViewModel.SelectedCategories">
             <inheritdoc cref="F:TasksManager.ViewModels.TaskListViewModel.selectedCategories"/>
@@ -285,6 +292,12 @@
         <member name="P:TasksManager.ViewModels.TaskListViewModel.NavigateToEditTaskCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.NavigateToEditTask(TasksManager.ViewModels.TaskViewModel)"/>.</summary>
         </member>
+        <member name="F:TasksManager.ViewModels.TaskListViewModel.navigateToDetailPageCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.NavigateToDetailPageCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskListViewModel.NavigateToDetailPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskListViewModel.NavigateToDetailPage(TasksManager.ViewModels.TaskViewModel)"/>.</summary>
+        </member>
         <member name="F:TasksManager.ViewModels.TaskListViewModel.unfinishTaskCommand">
             <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskListViewModel.UnfinishTaskCommand"/>.</summary>
         </member>
@@ -307,6 +320,9 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:TasksManager.ViewModels.TaskViewModel.Title">
             <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.title"/>
@@ -323,16 +339,36 @@
         <member name="P:TasksManager.ViewModels.TaskViewModel.IsCompleted">
             <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.isCompleted"/>
         </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.IsCompletedText">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.isCompletedText"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.IsCompletedColor">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.isCompletedColor"/>
+        </member>
         <member name="P:TasksManager.ViewModels.TaskViewModel.Category">
             <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.category"/>
         </member>
         <member name="P:TasksManager.ViewModels.TaskViewModel.OverdueStatus">
             <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.overdueStatus"/>
         </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.CompleteText">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.completeText"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.Exercises">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.exercises"/>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.TimeRemaining">
+            <inheritdoc cref="F:TasksManager.ViewModels.TaskViewModel.timeRemaining"/>
+        </member>
         <member name="M:TasksManager.ViewModels.TaskViewModel.OnDueDateChanged(System.DateTime)">
             <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.TaskViewModel.DueDate"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
             <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.TaskViewModel.DueDate"/> is changed.</remarks>
+        </member>
+        <member name="M:TasksManager.ViewModels.TaskViewModel.OnIsCompletedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.TaskViewModel.IsCompleted"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.TaskViewModel.IsCompleted"/> is changed.</remarks>
         </member>
         <member name="F:TasksManager.ViewModels.TaskViewModel.saveTaskCommand">
             <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskViewModel.SaveTaskCommand"/>.</summary>
@@ -345,6 +381,24 @@
         </member>
         <member name="P:TasksManager.ViewModels.TaskViewModel.CancelCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskViewModel.toggleCompleteTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskViewModel.ToggleCompleteTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.ToggleCompleteTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskViewModel.ToggleCompleteTask"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskViewModel.navigateToEditTaskCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskViewModel.NavigateToEditTaskCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.NavigateToEditTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskViewModel.NavigateToEditTask"/>.</summary>
+        </member>
+        <member name="F:TasksManager.ViewModels.TaskViewModel.addExerciseCommand">
+            <summary>The backing field for <see cref="P:TasksManager.ViewModels.TaskViewModel.AddExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:TasksManager.ViewModels.TaskViewModel.AddExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TasksManager.ViewModels.TaskViewModel.AddExercise"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
             <summary>
@@ -481,6 +535,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Exercises">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Exercises" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsTaskFieldEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsTaskFieldEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsDateNotSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsDateNotSet" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BgColor">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BgColor" generated properties.</summary>
         </member>
@@ -574,11 +634,23 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DueDate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DueDate" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCompletedText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCompletedText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCompletedColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCompletedColor" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Category">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Category" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OverdueStatus">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OverdueStatus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompleteText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompleteText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TimeRemaining">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TimeRemaining" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -594,6 +666,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Exercises">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Exercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsTaskFieldEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsTaskFieldEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsDateNotSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsDateNotSet" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BgColor">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BgColor" generated properties.</summary>
@@ -688,11 +766,23 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DueDate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DueDate" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCompletedText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCompletedText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCompletedColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCompletedColor" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Category">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Category" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OverdueStatus">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OverdueStatus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompleteText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompleteText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TimeRemaining">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TimeRemaining" generated properties.</summary>
         </member>
     </members>
 </doc>
