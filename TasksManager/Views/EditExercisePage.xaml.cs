@@ -22,7 +22,10 @@ public partial class EditExercisePage : ContentPage
         var exercise = await App.ExerciseRepository.GetExerciseByIdAsync(exerciseId);
         if (exercise != null)
         {
-            BindingContext = new ExerciseViewModel(exercise);
+            BindingContext = new ExerciseViewModel(exercise)
+            {
+                IsTaskFieldEnabled = !exercise.IsCompleted
+            };
         }
     }
 

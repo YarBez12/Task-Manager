@@ -9,6 +9,7 @@ namespace TasksManager.ViewModels;
 [QueryProperty(nameof(Date), "SelectedDate")]
 public partial class ExerciseViewModel : ObservableObject
 {
+    private ExerciseValidator _validator = new();
     private ExerciseViewModel? _copiedExercise;
     public ObservableCollection<int> Hours { get; } = new ObservableCollection<int>(Enumerable.Range(0, 24));
     public ObservableCollection<int> Minutes { get; } = new ObservableCollection<int>(Enumerable.Range(0, 60));
@@ -84,6 +85,34 @@ public partial class ExerciseViewModel : ObservableObject
     [ObservableProperty] 
     private bool isLast;
 
+    partial void OnIsLastChanged(bool value)
+    {
+        UpdateLastExerciseStatusAsync();
+    }
+    
+    private async System.Threading.Tasks.Task UpdateLastExerciseStatusAsync()
+    {
+        if (IsLast)
+        {
+            // var allExercises = (await _exerciseService.GetExercisesAsync()).Where(e => e.TaskId == TaskId && e.IsLast && e.Id != Id);
+            var allExercises =
+                (await _exerciseService.GetExercisesAsync()).Where(e => e.TaskId == TaskId && e.Id != Id);
+            var uncompletedExercises = allExercises.Where(e => !e.IsCompleted).ToList();
+            if (uncompletedExercises.Count > 0)
+            {
+                IsLast = false;
+                App.Current.MainPage.DisplayAlert("Error", "There are some uncompleted exercises on this task", "OK");
+                return;
+            }
+            var lastExercises = allExercises.Where(e => e.IsLast).ToList();
+            foreach (var exercise in lastExercises)
+            {
+                exercise.IsLast = false;
+                await _exerciseService.UpdateExerciseAsync(exercise);
+            }
+        }
+    }
+
     [ObservableProperty] 
     private int taskId;
 
@@ -153,12 +182,17 @@ public partial class ExerciseViewModel : ObservableObject
     private async void LoadTasksAsync()
     {
         var taskList = await _taskService.GetTasksAsync();
-        Tasks = new ObservableCollection<TasksManager.Models.Task>(taskList.Where(t => !t.IsCompleted));
+        Tasks = new ObservableCollection<TasksManager.Models.Task>(taskList.Where(t => !t.IsCompleted || t.Id == TaskId));
         if (TaskId != 0)
         {
             SelectedTask = taskList.FirstOrDefault(t => t.Id == TaskId);
-            TaskName = SelectedTask?.Title ?? string.Empty;
         }
+        else
+        {
+            SelectedTask = Tasks[0];
+            Console.WriteLine();
+        }
+        TaskName = SelectedTask?.Title ?? string.Empty;
     }
 
 
@@ -179,6 +213,17 @@ public partial class ExerciseViewModel : ObservableObject
     [RelayCommand]
     private async System.Threading.Tasks.Task Save()
     {
+        var result = await _validator.ValidateAsync(new TasksManager.Models.Exercise
+        {
+            Essence = Essence
+        });
+
+        if (!result.IsValid)
+        {
+            var errorMessages = string.Join("\n", result.Errors.Select(e => e.ErrorMessage));
+            await Application.Current.MainPage.DisplayAlert("Validation Error", errorMessages, "OK");
+            return;
+        }
         if (Id <= 0)
         {
             var newExercise = new Exercise

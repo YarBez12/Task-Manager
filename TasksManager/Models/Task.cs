@@ -20,6 +20,7 @@ public class Task
     public TaskCategory Category { get; set; } = TaskCategory.Other; // Новое поле
     public bool IsCompleted { get; set; } = false;
     public TaskOverdueStatus OverdueStatus { get; set; } = TaskOverdueStatus.Upcoming;
+    public int UserId { get; set; }
     
     public override string ToString()
     {

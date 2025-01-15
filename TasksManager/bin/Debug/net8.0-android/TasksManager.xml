@@ -134,6 +134,11 @@
             <param name="value">The new property value that was set.</param>
             <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.ExerciseViewModel.IsCompleted"/> is changed.</remarks>
         </member>
+        <member name="M:TasksManager.ViewModels.ExerciseViewModel.OnIsLastChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.ExerciseViewModel.IsLast"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:TasksManager.ViewModels.ExerciseViewModel.IsLast"/> is changed.</remarks>
+        </member>
         <member name="M:TasksManager.ViewModels.ExerciseViewModel.OnTaskIdChanged(System.Int32)">
             <summary>Executes the logic for when <see cref="P:TasksManager.ViewModels.ExerciseViewModel.TaskId"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>

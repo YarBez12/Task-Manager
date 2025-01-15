@@ -11,6 +11,7 @@ namespace TasksManager.ViewModels;
 
 public partial class TaskViewModel : ObservableObject
 {
+    private TaskValidator _validator = new TaskValidator();
     private readonly TaskService _taskService;
     public int Id { get; internal set; }
 
@@ -101,7 +102,7 @@ public partial class TaskViewModel : ObservableObject
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
         overdueStatus = TaskOverdueStatus.Upcoming;
-        Category = TaskCategory.Work;
+        Category = TaskCategory.Other;
         UpdateTimeRemaining();
         StartOverdueStatusUpdater();
         LoadExercises();
@@ -113,7 +114,7 @@ public partial class TaskViewModel : ObservableObject
         DueDate = DateTime.Now;
         Priority = TaskPriority.Medium;
         overdueStatus = TaskOverdueStatus.Upcoming;
-        Category = TaskCategory.Work;
+        Category = TaskCategory.Other;
         UpdateTimeRemaining();
         StartOverdueStatusUpdater();
         LoadExercises();
@@ -139,6 +140,18 @@ public partial class TaskViewModel : ObservableObject
     [RelayCommand]
     public async System.Threading.Tasks.Task SaveTask()
     {
+        var result = await _validator.ValidateAsync(new TasksManager.Models.Task
+        {
+            Title = Title,
+            DueDate = DueDate
+        });
+
+        if (!result.IsValid)
+        {
+            var errorMessages = string.Join("\n", result.Errors.Select(e => e.ErrorMessage));
+            await Application.Current.MainPage.DisplayAlert("Validation Error", errorMessages, "OK");
+            return;
+        }
         if (Id <= 0)
         {
             var newTask = new TasksManager.Models.Task
@@ -226,6 +239,7 @@ public partial class TaskViewModel : ObservableObject
     
     private void ScheduleMinuteUpdate(Action action)
     {
+        action.Invoke();
         var now = DateTime.Now;
         var nextMinute = now.AddMinutes(1).AddSeconds(-now.Second);
         var timeUntilNextMinute = nextMinute - now;
@@ -274,8 +288,14 @@ public partial class TaskViewModel : ObservableObject
         var existingTask = await _taskService.GetTaskByIdAsync(Id);
         if (existingTask != null)
         {
+            var allExercises = (await _exerciseService.GetExercisesAsync()).Where(e => e.TaskId == existingTask.Id).ToList();
             existingTask.IsCompleted = IsCompleted;
             await _taskService.UpdateTaskAsync(existingTask);
+            foreach (var exercise in allExercises)
+            {
+                exercise.IsCompleted = true;
+                await _exerciseService.UpdateExerciseAsync(exercise);
+            }
         }
     }
     

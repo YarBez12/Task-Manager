@@ -37,6 +37,7 @@ public partial class TaskListViewModel : ObservableObject
     // }
     
     private readonly TaskService _taskService;
+    private readonly ExerciseService _exerciseService;
     private Timer _overdueUpdateTimer;
 
     [ObservableProperty] 
@@ -52,6 +53,7 @@ public partial class TaskListViewModel : ObservableObject
         OverdueStatusList = new SelectionItemListViewModel<TaskOverdueStatus>();
         SelectedOverdueStatuses = OverdueStatusList.GetSelectedItems();
         _taskService = new TaskService();
+        _exerciseService = new ExerciseService();
         CurrentTasks = new ObservableCollection<TaskViewModel>();
         CompletedTasks = new ObservableCollection<TaskViewModel>();
         StartOverdueStatusUpdater();
@@ -69,6 +71,7 @@ public partial class TaskListViewModel : ObservableObject
     
     private void ScheduleDailyUpdate(Action action)
     {
+        action.Invoke();
         var now = DateTime.Now;
         var midnight = now.Date.AddDays(1);
         var timeUntilMidnight = midnight - now;
@@ -186,6 +189,7 @@ public partial class TaskListViewModel : ObservableObject
     {
         if (task != null)
         {
+            var allExercises = (await _exerciseService.GetExercisesAsync()).Where(e => e.TaskId == task.Id).ToList();
             var result = await _taskService.DeleteTaskAsync(task.Id);
             if (result > 0) 
             {
@@ -196,7 +200,12 @@ public partial class TaskListViewModel : ObservableObject
 
                     if (CompletedTasks.Contains(task))
                         CompletedTasks.Remove(task);
+                    
                 });
+                foreach (var exercise in allExercises)
+                {
+                    await _exerciseService.DeleteExerciseAsync(exercise);
+                }
             }
         }
     }
@@ -210,6 +219,7 @@ public partial class TaskListViewModel : ObservableObject
             var existingTask = await _taskService.GetTaskByIdAsync(task.Id);
             if (existingTask != null)
             {
+                var allExercises = (await _exerciseService.GetExercisesAsync()).Where(e => e.TaskId == existingTask.Id).ToList();
                 existingTask.IsCompleted = true;
                 await _taskService.UpdateTaskAsync(existingTask);
                 MainThread.BeginInvokeOnMainThread(() =>
@@ -219,7 +229,13 @@ public partial class TaskListViewModel : ObservableObject
                     if (!CompletedTasks.Contains(task))
                         CompletedTasks.Add(task);
                 });
+                foreach (var exercise in allExercises)
+                {
+                    exercise.IsCompleted = true;
+                    await _exerciseService.UpdateExerciseAsync(exercise);
+                }
             }
+            
         }
     }
     
@@ -289,6 +305,7 @@ public partial class TaskListViewModel : ObservableObject
             var existingTask = await _taskService.GetTaskByIdAsync(task.Id);
             if (existingTask != null)
             {
+                var lastExercises = (await _exerciseService.GetExercisesAsync()).Where(e => e.TaskId == existingTask.Id && e.IsLast).ToList();
                 existingTask.IsCompleted = false;
                 await _taskService.UpdateTaskAsync(existingTask);
                 MainThread.BeginInvokeOnMainThread(() =>
@@ -296,6 +313,11 @@ public partial class TaskListViewModel : ObservableObject
                     CompletedTasks.Remove(task);
                     CurrentTasks.Add(task);
                 });
+                foreach (var exercise in lastExercises)
+                {
+                    exercise.IsCompleted = false;
+                    await _exerciseService.UpdateExerciseAsync(exercise);
+                }
             }
         }
     }

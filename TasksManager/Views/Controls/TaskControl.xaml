@@ -42,8 +42,8 @@
                VerticalOptions="Center"
                HorizontalOptions="End"/>
         <Picker Title="Select Priority"
-                SelectedItem="{Binding Priority}"
                 ItemsSource = "{Binding Priorities}"
+                SelectedItem="{Binding Priority}"
                 Grid.Row="3"
                 Grid.Column="1"
                 VerticalOptions="Center">
@@ -54,8 +54,8 @@
                VerticalOptions="Center"
                HorizontalOptions="End"/>
         <Picker Title="Select Category"
-                SelectedItem="{Binding Category}"
                 ItemsSource = "{Binding Categories}"
+                SelectedItem="{Binding Category}"
                 Grid.Row="4"
                 Grid.Column="1"
                 VerticalOptions="Center">

@@ -81,6 +81,7 @@ public partial class ScheduleViewModel : ObservableObject
     
     private void ScheduleDailyUpdate(Action action)
     {
+        action.Invoke();
         var now = DateTime.Now;
         var midnight = now.Date.AddDays(1);
         var timeUntilMidnight = midnight - now;
