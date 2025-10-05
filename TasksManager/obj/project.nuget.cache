@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cm+ToBmF2hU=",
+  "dgSpecHash": "G5IMLK0BgYo=",
   "success": true,
-  "projectFilePath": "/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/TasksManager.csproj",
+  "projectFilePath": "/Users/yaroslav/Projects/Task-Manager/TasksManager/TasksManager.csproj",
   "expectedPackageFiles": [
     "/Users/yaroslav/.nuget/packages/communitytoolkit.maui/9.0.3/communitytoolkit.maui.9.0.3.nupkg.sha512",
     "/Users/yaroslav/.nuget/packages/communitytoolkit.maui.core/9.0.3/communitytoolkit.maui.core.9.0.3.nupkg.sha512",

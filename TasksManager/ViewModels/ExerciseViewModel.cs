@@ -16,6 +16,7 @@ public partial class ExerciseViewModel : ObservableObject
     private readonly ExerciseService _exerciseService;
     private readonly TaskService _taskService;
     private BufferService _bufferService = new BufferService();
+    private bool _suppressIsLastCheck;
 
     [ObservableProperty] 
     private bool isTaskFieldEnabled = true;
@@ -87,6 +88,7 @@ public partial class ExerciseViewModel : ObservableObject
 
     partial void OnIsLastChanged(bool value)
     {
+        if (_suppressIsLastCheck) return;
         UpdateLastExerciseStatusAsync();
     }
     
@@ -163,6 +165,7 @@ public partial class ExerciseViewModel : ObservableObject
     {
         _taskService = new TaskService();
         _exerciseService = exerciseService ?? new ExerciseService();
+        _suppressIsLastCheck = true;
         Id = exercise.Id;
         Essence = exercise.Essence;
         Date = exercise.Date;
@@ -176,6 +179,7 @@ public partial class ExerciseViewModel : ObservableObject
         Priority = exercise.Priority;
         TaskId = exercise.TaskId;
         IsLast = exercise.IsLast;
+        _suppressIsLastCheck = false;
         LoadTasksAsync();
     }
     

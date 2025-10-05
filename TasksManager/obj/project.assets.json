@@ -29271,11 +29271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/TasksManager.csproj",
+      "projectUniqueName": "/Users/yaroslav/Projects/Task-Manager/TasksManager/TasksManager.csproj",
       "projectName": "TasksManager",
-      "projectPath": "/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/TasksManager.csproj",
+      "projectPath": "/Users/yaroslav/Projects/Task-Manager/TasksManager/TasksManager.csproj",
       "packagesPath": "/Users/yaroslav/.nuget/packages/",
-      "outputPath": "/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/obj/",
+      "outputPath": "/Users/yaroslav/Projects/Task-Manager/TasksManager/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "UsingMicrosoftNETSdk": false,

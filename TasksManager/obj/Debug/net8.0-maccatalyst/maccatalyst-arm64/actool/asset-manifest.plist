@@ -6,9 +6,9 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/actool/bundle/Assets.car</string>
-			<string>/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/actool/bundle/appicon.icns</string>
-			<string>/Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/actool/partial-info.plist</string>
+			<string>/Users/yaroslav/Projects/Task-Manager/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/actool/bundle/Assets.car</string>
+			<string>/Users/yaroslav/Projects/Task-Manager/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/actool/bundle/appicon.icns</string>
+			<string>/Users/yaroslav/Projects/Task-Manager/TasksManager/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/actool/partial-info.plist</string>
 		</array>
 	</dict>
 </dict>

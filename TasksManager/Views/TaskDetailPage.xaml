@@ -10,10 +10,10 @@
     
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
-            <Label Text="Task Details" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="Task Details" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"  />
             <HorizontalStackLayout Spacing="10">
-            <Label Text="Title:" FontSize="18" FontAttributes="Bold" VerticalOptions="Center"/>
-            <Label Text="{Binding Title}" FontSize="16" VerticalOptions="Center"/>
+                <Label Text="Title:" FontSize="18" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Label Text="{Binding Title}" FontSize="16" VerticalOptions="Center"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="10">
             <Label Text="Description:" FontSize="18" FontAttributes="Bold" VerticalOptions="Center"/>

@@ -1,1 +1,1 @@
--v --force --timestamp=none --sign - /Users/yaroslav/Projects/RiderProjects/TasksManager/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/libmono-component-debugger.dylib
+-v --force --timestamp=none --sign - /Users/yaroslav/Projects/Task-Manager/TasksManager/bin/Debug/net8.0-ios/iossimulator-arm64/TasksManager.app/libmono-component-debugger.dylib
